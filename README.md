@@ -4,5 +4,5 @@ This website is a static information site intended to provide information to pot
 (it is not an ecommerce cite nor does it process payments).
 
 This website is constructed in Jekyll (ergo the repostitory's name) a static site generator.
-git c
+<p></p>
 -Josef Gisis 11/19/2023
