@@ -1,0 +1,579 @@
+/* Stylesheet for irepair4u website */
+
+
+/* Basic reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+} 
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    margin: 0;
+    padding: 0;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+
+/* Variables */
+:root {
+    --red-accent: rgb(225, 30, 70);
+    --lighter-red-accent: rgba(225, 30, 70, 0.8);
+    --gray-accent: rgb(210, 210, 210);
+
+    --gray-background: rgba(190, 190, 190, 0.3);
+    --red-background: rgba(225, 30, 70, 0.4);
+    --background-color: rgb(245, 245, 245);
+    --shadow-color: rgb(160, 160, 160);
+    --lighter-shadow-color: rgb(200, 200, 200);
+
+    --fw-regular: 400;
+    --fw-semi-bold: 500;
+    --fw-bold: 700;
+
+    --fs-body: 1rem;
+    --fs-card: 1.1rem;
+    --fs-column: 1.2rem;
+    --fs-title-small: 1.5rem; 
+    --fs-title: 2rem;
+    --fs-section-title: 3rem;
+     
+    --two-column-width: 140px;
+    --three-column-width: 220px;
+    --four-column-width: 300px;
+    --five-column-width: 380px;
+    --six-column-width: 460px;
+    --eight-column-width: 620px;
+    --nine-column-width: 700px;
+    --twelve-column-width: 940px;
+    --full-width: 960px;
+
+    --base-padding: 1em;
+}
+
+
+/* General styling */
+.background-white {
+    background-color: white;
+}
+
+.background-red {
+    background-color: var(--red-accent);
+}
+
+.background-gray {
+    background-color: var(--gray-accent);
+}
+
+.text-red {
+    color: var(--red-accent);
+}
+
+.text-gray {
+    color: var(--gray-accent);
+}
+
+.fs-body {
+    font-size: var(--fs-body);
+}
+
+.fs-card {
+    font-size: var(--fs-card);
+}
+
+.fs-column {
+    font-size: var(--fs-column);
+}
+
+.fs-title {
+    font-size: var(--fs-title);
+}
+
+.fs-section-title {
+    /* fs-section-title font-size gets special styling */
+    font-size: var(--fs-section-title);
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: inherit; 
+}
+
+.fw-regular {
+    font-weight: var(--fw-regular);
+}
+
+.fw-semi-bold {
+    font-weight: var(--fw-semi-bold);
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+
+/* Column width general styling */
+.two-column-width {
+    max-width: var(--two-column-width);
+}
+
+.three-column-width {
+    max-width: var(--three-column-width);
+}
+
+.four-column-width {
+    max-width: var(--four-column-width);
+}
+
+.six-column-width {
+    max-width: var(--six-column-width);
+}
+
+.eight-column-width {
+    max-width: var(--eight-column-width);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.nine-column-width {
+    max-width: var(--nine-column-width);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.twelve-column-width {
+    max-width: var(--twelve-column-width);
+}
+
+.full-width {
+    max-width: var(--full-width);
+}
+
+
+/* General element styling */
+main {
+    min-height: 80vmin;
+}
+
+section {
+    padding-block: 2rem; 
+}
+
+.container {
+    width: min(var(--twelve-column-width), 100% - var(--base-padding));
+    margin-inline: auto;
+    padding-block: 1rem;
+}
+
+.services-container {
+    width: min(var(--full-width), 100% - var(--base-padding));
+    margin-inline: auto;
+    padding-block: 1rem;
+}
+
+.single-column-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.single-column-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.double-column {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.four-column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.three-column-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto; 
+    justify-content: center;
+    justify-items: center;
+    padding-block: 2em;
+}
+
+
+/* Button styling */
+.red-button { 
+    color: white;
+    background-color: var(--red-accent);
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px;
+    border-style: solid;
+    border-color: var(--red-accent);
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 100ms;
+    box-shadow: 4px 8px 4px 0px var(--lighter-shadow-color);
+}
+
+.red-button:hover {
+    background-color: var(--lighter-red-accent);
+    transform: translateY(1px);
+    box-shadow: 2px 4px 4px 0px var(--shadow-color);
+}
+
+.inverse-red-button {
+    color: var(--red-accent);
+    background-color: white;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px;
+    border-style: solid;
+    border-color: var(--red-accent);
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 100ms;
+    box-shadow: 4px 8px 4px 0px var(--lighter-shadow-color);
+}
+
+.inverse-red-button:hover {
+    color: var(--lighter-red-accent);
+    border-color: var(--lighter-red-accent);
+    text-decoration: underline;
+    transform: translateY(1px);
+    box-shadow: 2px 4px 4px 0px var(--shadow-color);
+}
+
+
+/* Specific element styling */
+
+
+/* Body and body content style */
+body {
+    font-family: sans-serif;
+    font-size: var(--fs-body);
+    color: black;
+    background-color: white;
+}   
+
+
+/* banner and banner content style */
+.banner {
+    padding-block: 1em;
+    border-bottom: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--shadow-color);
+}
+
+.banner h1,
+.banner h2, 
+.banner h3, 
+.banner h4 {
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+
+/* Header and header content style */
+header {
+    /* box-shadow takes horizonatal and vertical offset then blur distance and then shadow distance */
+    box-shadow: 0px 0px 20px 5px var(--shadow-color);
+}
+
+.logo img {
+    image-rendering: optimizeSpeed;
+    width: 387px;
+    height: 45px;
+    shape-rendering: crispEdges; 
+    object-fit: contain;
+}
+
+.navbar-list li {
+    /* inline-block removes list styles and make items horizontal */
+    display: inline-block;
+}
+
+header .red-button {
+    /* This creates a gap between the last regular button and the default button */ 
+    margin-left: 15px;
+}
+
+.nav-link a{
+    color: black;
+    text-decoration: none;
+    /* ensures min-width to homogenize appearance */
+    min-width: 60px;
+    padding: 0.8rem;
+}
+
+.nav-link a:hover {
+    color: var(--red-accent);
+    text-decoration: underline;
+}
+
+
+/* Page content style */
+#about-simple {
+    background-image: url('/home page/images/irepair4u_logo_300.svg');
+    background-size: cover;
+}
+
+.svg-background {
+    position: absolute;
+    transform: rotate(-10deg);
+    top: 0px;
+    left: 55%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#about-simple h1, 
+#about-simple h2, 
+#about-simple h3,
+#about-simple h4 {
+    margin-block: 30px;
+}
+
+#about-simple .red-button {
+    margin: 20px 10px;
+}
+
+#about-simple .inverse-red-button {
+    margin: 20px 10px;
+}
+
+#about-simple img {
+    margin-top: 50px; 
+    margin-bottom: 30px;
+}
+
+
+/* about-detailed content and section styling */
+#about-detailed {
+    background: linear-gradient(to bottom right, var(--gray-background), var(--gray-accent));
+}
+
+#about-detailed .double-column {
+    height: 307px;
+    margin-block: 2.5em;
+}
+
+.double-column-text {
+    height: 307px;
+    /* Inactive order property */
+    /* order: 1; */
+    max-width: var(--six-column-width);  
+}
+
+.double-column-text h3 {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+}
+
+.double-column-text p {
+    padding: 1.5em;
+}
+
+.double-column-image {
+    /* Inactive order property */
+    /* order: 2; */
+}
+
+
+/* Services section grid and grid card styling */
+.grid-card {
+    background-image: url("home page/images/age-barros-fKAjOxgZNPg-unsplash.jpg");
+    background-size: cover;
+    color: white;
+    margin-block: 1em;
+    background-color: var(--red-accent);
+    width: calc(var(--three-column-width) + 40px);
+    height: var(--five-column-width);
+    border: 0;
+    border-style: solid;
+    border-color: white;
+    overflow: hidden;
+    transition: all 1s;
+    box-shadow: 4px 8px 4px 0 var(--shadow-color);
+}
+
+#screen-replacement-info {
+    background-image: url("home page/images/age-barros-fKAjOxgZNPg-unsplash.jpg");
+    background-size: cover;
+}
+
+#water-damage-info {
+    background-image: url("home page/images/iphone-1067991_640.jpg");
+    background-size: cover;
+}
+
+#battery-replacement-info {
+    background-image: url("home page/images/tyler-lastovich-rAtzDB6hWrU-unsplash.jpg");
+    background-size: cover; 
+}
+
+#data-recovery-info {
+    background-image: url("home page/images/benjamin-lehman-GNyjCePVRs8-unsplash.jpg");
+    background-size: cover;
+}
+
+#accessories-info {
+    background-image: url("home page/images/lucas-hoang-0_S1K3u6Cmc-unsplash.jpg");
+    background-size: cover;
+}
+
+#speaker-repair-info {
+    background-image: url("home page/images/apple-1284223_640.jpg");
+    background-size: cover;
+}
+
+.grid-card-logo {
+    height: var(--five-column-width);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    transition: all 1s;
+}
+
+.grid-card-logo h3 {
+    font-size: var(--fs-title-small);
+    font-weight: var(--fw-bold);
+}
+
+.grid-card-text {
+    font-size: var(--fs-card);
+    font-weight: var(--fw-bold);
+    opacity: 0;
+    height: var(--five-column-width);
+    text-align: left;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    transition: all 1s;
+}
+
+.grid-card:hover {
+    background: var(--lighter-red-accent);
+}
+
+.grid-card:hover .grid-card-logo {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.grid-card:hover .grid-card-text {
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 1; 
+    transform: translateY(-100%);
+}
+
+
+/* footer and footer content style */
+.primary-footer{
+    color: white;
+}
+
+.primary-footer ul {
+    margin-block: 20px;
+    padding: 0;
+}
+
+.primary-footer li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.primary-footer li div {
+    width: var(--three-column-width);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.primary-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+#phone::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url('images/contact-mobile-svgrepo-com.svg');
+    background-size: cover; 
+}
+
+#email::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url('images/contact-mail-svgrepo-com.svg');
+    background-size: cover;
+}
+
+#address::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url('images/contact-map-pin-svgrepo-com.svg');
+    background-size: cover;
+}
+
+.primary-footer table th {
+    padding-bottom: 20px;
+}
+
+.primary-footer table td {
+    padding-right: 2em;
+}
+
+.primary-footer a:hover {
+    text-decoration: underline;
+}
+
+#copyright {
+    padding: 20px;
+}

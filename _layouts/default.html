@@ -1,28 +1,124 @@
+<!-- Home page (index) for irepair4u website -->
 <!DOCTYPE html>
-<html>
+ <html lang="en-us">
     <head>
         <meta charset="utf-8">
         <title>{{ page.title }}</title>
-        <style type="text/css">
-            body {
-                height: 100vmax;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                align-content: center;
-                justify-content: space-between;
-            }
-            h1, p {
-                text-align: center;
-            }
-        
-        </style>
+        <link rel="stylesheet" type="text/css" href="{{ page.style }}">
+        <link rel="stylesheet" type="text/css" href="{{ page.secondary-style }}">
+
     </head>
     <body>
-        <h1>IREPAIR4U</h1>
-        <p></p>
-        {{ content }}
-        <p></p>
-        <p>copyright 2023 irepair4u</p>
+
+        
+        <!-- primary-header -->
+        <header class="primary-header background-white">
+            <div class="container">
+
+                <div class="single-column-row">
+
+                    <div class="logo">
+                        <a href="../home page/Irepair4u_home_page.html"><img src="../images/irepair4u_red_transparent_100x860.svg" alt="irepair4u banner" title="irepair4u banner" width="387px" height="45px"></a>
+                    </div>
+
+                    <div>
+                        <nav class="primary-navigation">
+                            <ul aria-label="Primary navigation bar" role="list" class="navbar-list">
+                                <li class="nav-link fs-card fw-regular"><a href="../about page/Irepair4u_about_page.html">ABOUT</a></li>
+                                <li class="nav-link fs-card fw-regular"><a href="../services page/Irepair4u_services_page.html">SERVICES</a></li>
+                                <li class="nav-link fs-card fw-regular"><a href="../faq page/Irepair4u_faq_page.html">FAQ</a></li>
+                                <li class="nav-button fs-regular fw-semi-bold"><a href="../contact us page/Irepair4u_contact_page.html"><button class="red-button">CONTACT US</button></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+
+
+        <!-- main -->
+        <main>
+            {{ content }}
+        </main>
+          
+
+        <!-- main footer section -->
+        <footer class="primary-footer background-red">
+            <div class="container">
+
+                <div class="four-column">
+
+                    <div>
+                        <ul id="business-links" aria-label="Business contact information">
+                            <li>
+                                <div>
+                                    <img src="../images/irepair4u_white_transparent_100x860.svg" alt="irepair4u banner" width="172px" height="20px">
+                                    <img src="../images/irepair4u_icon_white_transparent_300x300.svg" alt="irepair4u logo" width="40px" height="40px">
+                                </div>
+                            </li>
+                            <li id="phone">(732)-330-3038</li>
+                            <li id="email"><a href="mailto:iRepairr4u@gmail.com">iRepairr4U@gmail.com</a><li>
+                            <li id="address">750 Green Valley rd., Jackson, NJ 08527</li>
+                            <li>
+                                <table id="hours" aria-label="Business hours listing">
+                                    <tr><th id="hours-heading"><h4 class="fs-card fw-bold">HOURS</h4></th></tr>
+                                    <tr><td>Sun - Thu</td><td>11:00am - 5:00pm</td></tr>
+                                    <tr><td>Friday</td><td> 11:00am - 2:00pm</td></tr>
+                                    <tr><td>Saturday</td><td>closed</td></tr>
+                                </table>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <ul id="information-links" aria-label="General information links">
+                            <li><h4 class="fs-card fw-bold">INFORMATION</h4></li>
+                            <li><a href="../about page/Irepair4u_about_page.html">about</a></li>
+                            <li><a href="../about page/Irepair4u_about_page.html">terms and conditions</a></li>
+                            <li><a href="../faq page/Irepair4u_faq_page.html">faq</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">services</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <ul id="services-links" aria-label="Service links">
+                            <li><h4 class="fs-card fw-bold">SERVICES</h4></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">screen repair</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">battery replacement</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">speaker repair</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">data recovery</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">board repairs</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">accessories</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <ul id="devices-links" aria-label="Device coverage service links">
+                            <li><h4 class="fs-card fw-bold">DEVICES</h4></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">iphones</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">samsungs</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">smartphones</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">flip phones</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">tablets</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">computers</a></li>
+                        </ul>
+                    </div>
+
+                </div> 
+
+                <div class="single-column">
+                    <div class="eight-column-width">
+                        <p id="copyright">&copy 2023 iRepair4U LLC</p>
+                    </div>
+                </div>  
+
+            </div>
+        </footer>
+
+
     </body>
-</html>
+
+
+ </html>
