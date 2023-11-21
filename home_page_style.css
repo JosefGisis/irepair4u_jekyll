@@ -1,0 +1,224 @@
+/*********************************************************************************************
+Banner styling.
+*********************************************************************************************/
+
+/* banner and banner content style */
+.banner {
+    padding-block: 1em;
+    border-bottom: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--shadow-color);
+}
+
+.banner h1,
+.banner h2, 
+.banner h3, 
+.banner h4 {
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+
+
+/*********************************************************************************************
+Home page style.
+*********************************************************************************************/
+
+/* Page content style */
+#about-simple {
+    background-image: url('/home page/images/irepair4u_logo_300.svg');
+    background-size: cover;
+}
+
+.svg-background {
+    position: absolute;
+    transform: rotate(-10deg);
+    top: 0px;
+    left: 55%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#about-simple h1, 
+#about-simple h2, 
+#about-simple h3,
+#about-simple h4 {
+    margin-block: 30px;
+}
+
+#about-simple .red-button {
+    margin: 20px 10px;
+}
+
+#about-simple .inverse-red-button {
+    margin: 20px 10px;
+}
+
+#about-simple img {
+    width: 100%;
+    height: auto;
+    margin-top: 50px; 
+    margin-bottom: 30px;
+}
+
+
+/* about-detailed content and section styling */
+#about-detailed {
+    background: linear-gradient(to bottom right, var(--gray-background), var(--gray-accent));
+}
+
+#about-detailed .container {
+    height: auto;
+}
+
+#about-detailed .double-column {
+    margin-block: 2em;
+    height: auto;
+}
+
+.double-column-text {
+    height: auto;
+    max-width: 100%; 
+}
+
+.double-column-text h3 {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+}
+
+.double-column-text p {
+    padding: 1.5em;
+}
+
+.double-column-image img{
+    max-width: 100%;
+    height: auto; 
+}
+
+@media screen and (max-width: 960px) {
+    #about-detailed .double-column {
+        flex-direction: column;
+    }
+    .double-column-text {
+        order: 1;
+        margin-top: 1em;
+    }
+    .double-column-image {
+        order: 2;
+    }
+}
+
+
+/* Services section grid and grid card styling */
+.grid-card {
+    background-size: cover;
+    color: white;
+    margin-block: 1em;
+    background-color: var(--red-accent);
+    width: min(calc(var(--three-column-width) + 40px), 90%);
+    border: 0;
+    border-style: solid;
+    border-color: white;
+    overflow: hidden;
+    transition: all 1s;
+    box-shadow: 4px 8px 4px 0 var(--shadow-color);
+}
+
+
+#screen-replacement-info {
+    background-image: url("home page/images/age-barros-fKAjOxgZNPg-unsplash.jpg");
+    background-size: cover;
+}
+
+#water-damage-info {
+    background-image: url("home page/images/iphone-1067991_640.jpg");
+    background-size: cover;
+}
+
+#battery-replacement-info {
+    background-image: url("home page/images/tyler-lastovich-rAtzDB6hWrU-unsplash.jpg");
+    background-size: cover; 
+}
+
+#data-recovery-info {
+    background-image: url("home page/images/benjamin-lehman-GNyjCePVRs8-unsplash.jpg");
+    background-size: cover;
+}
+
+#accessories-info {
+    background-image: url("home page/images/lucas-hoang-0_S1K3u6Cmc-unsplash.jpg");
+    background-size: cover;
+}
+
+#speaker-repair-info {
+    background-image: url("home page/images/apple-1284223_640.jpg");
+    background-size: cover;
+}
+
+.grid-card-logo {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    transition: all 1s;
+}
+
+.grid-card-logo h3 {
+}
+
+.grid-card-logo img {
+    width: 50%;
+    height: auto;
+}
+
+.grid-card-text {
+    width: 100%;
+    opacity: 0;
+    text-align: left;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    transition: all 1s;
+}
+
+.grid-card:hover {
+    background: var(--lighter-red-accent);
+}
+
+.grid-card:hover .grid-card-logo {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.grid-card:hover .grid-card-text {
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 1; 
+    transform: translateY(-100%);
+}
+
+@media screen and (max-width: 600px) {
+    .grid-card-logo h3 {
+        font-size: var(--fs-column);
+    }
+    .grid-card-text p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .grid-card-logo h3 {
+        font-size: var(--fs-body);
+    }
+    .grid-card-text p {
+        font-size: 0.7rem;
+        font-weight: var(--fw-regular);
+    }
+}

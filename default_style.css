@@ -1,41 +1,6 @@
-/* Stylesheet for irepair4u website */
-
-
-/* Basic reset */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-} 
-
-* {
-    margin: 0;
-}
-
-body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-}
-
-img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-}
-
-input, button, textarea, select {
-    font: inherit;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-    margin: 0;
-    padding: 0;
-}
-
-#root, #__next {
-    isolation: isolate;
-}
-
+/*********************************************************************************************
+Root variables.
+*********************************************************************************************/
 
 /* Variables */
 :root {
@@ -71,10 +36,15 @@ p, h1, h2, h3, h4, h5, h6 {
     --full-width: 960px;
 
     --base-padding: 1em;
+    --inline-base-padding: 2em;
 }
 
 
-/* General styling */
+/*********************************************************************************************
+General utility class styles.
+*********************************************************************************************/
+
+/* Utility class styling */
 .background-white {
     background-color: white;
 }
@@ -95,6 +65,7 @@ p, h1, h2, h3, h4, h5, h6 {
     color: var(--gray-accent);
 }
 
+
 .fs-body {
     font-size: var(--fs-body);
 }
@@ -107,6 +78,10 @@ p, h1, h2, h3, h4, h5, h6 {
     font-size: var(--fs-column);
 }
 
+.fs-title-small {
+    font-size: var(--fs-title-small);
+}
+
 .fs-title {
     font-size: var(--fs-title);
 }
@@ -117,6 +92,26 @@ p, h1, h2, h3, h4, h5, h6 {
     border-bottom: 2px;
     border-bottom-style: solid;
     border-bottom-color: inherit; 
+}
+
+/* Text sizes shrink to accommodate smaller screens */
+@media screen and (max-width: 600px) {
+    .fs-card {
+        font-size: 1.0rem;
+    }
+    .fs-column {
+        font-size: 1.1rem;
+    }
+    .fs-title-small {
+        font-size: 1.3rem;
+    }
+    .fs-title {
+        font-size: 1.6rem;
+    }
+    .fs-section-title {
+        font-size: 2.2rem;
+        border-bottom: none;
+    }
 }
 
 .fw-regular {
@@ -180,13 +175,13 @@ section {
 }
 
 .container {
-    width: min(var(--twelve-column-width), 100% - var(--base-padding));
+    width: min(var(--twelve-column-width), 100% - var(--inline-base-padding));
     margin-inline: auto;
     padding-block: 1rem;
 }
 
 .services-container {
-    width: min(var(--full-width), 100% - var(--base-padding));
+    width: min(var(--full-width), 100% - var(--inline-base-padding));
     margin-inline: auto;
     padding-block: 1rem;
 }
@@ -228,8 +223,21 @@ section {
     padding-block: 2em;
 }
 
+@media screen and (max-width: 600px) {
+    .four-column {
+        flex-direction: column;
+    } 
+}
 
-/* Button styling */
+@media screen and (max-width: 960px) {
+    .three-column-grid {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: auto auto;
+    }
+}
+
+
+/* Button utililty class styling */
 .red-button { 
     color: white;
     background-color: var(--red-accent);
@@ -272,9 +280,19 @@ section {
     box-shadow: 2px 4px 4px 0px var(--shadow-color);
 }
 
+@media screen and (max-width: 600px) {
+    .red-button {
+        padding: 8px;
+    }
+    .inverse-red-button {
+        padding: 8px;
+    }
+}
 
-/* Specific element styling */
 
+/*********************************************************************************************
+Specific element styling.
+*********************************************************************************************/
 
 /* Body and body content style */
 body {
@@ -285,35 +303,16 @@ body {
 }   
 
 
-/* banner and banner content style */
-.banner {
-    padding-block: 1em;
-    border-bottom: 5px;
-    border-bottom-style: solid;
-    border-bottom-color: var(--shadow-color);
-}
 
-.banner h1,
-.banner h2, 
-.banner h3, 
-.banner h4 {
-    text-align: center;
-    padding-bottom: 1em;
-}
 
+/*********************************************************************************************
+Header and navbar styling. 
+*********************************************************************************************/
 
 /* Header and header content style */
 header {
     /* box-shadow takes horizonatal and vertical offset then blur distance and then shadow distance */
     box-shadow: 0px 0px 20px 5px var(--shadow-color);
-}
-
-.logo img {
-    image-rendering: optimizeSpeed;
-    width: 387px;
-    height: 45px;
-    shape-rendering: crispEdges; 
-    object-fit: contain;
 }
 
 .navbar-list li {
@@ -339,170 +338,94 @@ header .red-button {
     text-decoration: underline;
 }
 
-
-/* Page content style */
-#about-simple {
-    background-image: url('/home page/images/irepair4u_logo_300.svg');
-    background-size: cover;
+.nav-link a:active {
+    color: var(--red-accent);
+    text-decoration: underline;
 }
 
-.svg-background {
+
+/* This segment control the hamburger menu */
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
     position: absolute;
-    transform: rotate(-10deg);
-    top: 0px;
-    left: 55%;
-    z-index: -1;
-    opacity: 0.3;
+    width: min(35px, 10%);
+    right: var(--base-padding);
+    background-color: transparent;
 }
 
-#about-simple h1, 
-#about-simple h2, 
-#about-simple h3,
-#about-simple h4 {
-    margin-block: 30px;
+/* .bars make up the three lines of the hamburger icon */
+.hamburger-icon .bar {
+    background-color:  var(--red-accent);
+    height: 5px;
+    margin: 4px 0;
+    transition: all 150ms;
 }
 
-#about-simple .red-button {
-    margin: 20px 10px;
-}
-
-#about-simple .inverse-red-button {
-    margin: 20px 10px;
-}
-
-#about-simple img {
-    margin-top: 50px; 
-    margin-bottom: 30px;
+.hamburger-icon:hover .bar,
+.hamburger-icon:active .bar {
+    background-color: var(--lighter-red-accent);
 }
 
 
-/* about-detailed content and section styling */
-#about-detailed {
-    background: linear-gradient(to bottom right, var(--gray-background), var(--gray-accent));
+/* .hamburger-navigation is the ul that actually makes up the list */
+.hamburger-navigation {
+    display: none;
+    position: absolute;
+    width: 100%;
+    border-bottom: 5px solid var(--shadow-color);
+} 
+
+.hamburger-navigation ul {
+    list-style: none;
+    padding: 0;
 }
 
-#about-detailed .double-column {
-    height: 307px;
-    margin-block: 2.5em;
+.hamburger-navigation li {
+    display: block;
 }
 
-.double-column-text {
-    height: 307px;
-    /* Inactive order property */
-    /* order: 1; */
-    max-width: var(--six-column-width);  
+.hamburger-navigation a {
+    background-color: var(--gray-accent);
+    display: block;
+    padding: 1em;
+    width: 100%;
+    color: black;
+    text-decoration: none;
 }
 
-.double-column-text h3 {
+.hamburger-navigation a:hover {
     color: white;
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+    background-color: var(--shadow-color);
 }
 
-.double-column-text p {
-    padding: 1.5em;
-}
-
-.double-column-image {
-    /* Inactive order property */
-    /* order: 2; */
-}
-
-
-/* Services section grid and grid card styling */
-.grid-card {
-    background-image: url("home page/images/age-barros-fKAjOxgZNPg-unsplash.jpg");
-    background-size: cover;
+.hamburger-navigation a:active {
     color: white;
-    margin-block: 1em;
-    background-color: var(--red-accent);
-    width: calc(var(--three-column-width) + 40px);
-    height: var(--five-column-width);
-    border: 0;
-    border-style: solid;
-    border-color: white;
-    overflow: hidden;
-    transition: all 1s;
-    box-shadow: 4px 8px 4px 0 var(--shadow-color);
+    background-color: var(--shadow-color);
 }
 
-#screen-replacement-info {
-    background-image: url("home page/images/age-barros-fKAjOxgZNPg-unsplash.jpg");
-    background-size: cover;
+@media screen and (max-width: 960px) {
+    .logo img {
+        /* Shrings the logo for smaller screens */
+        width: min(387px, 80%);
+        height: auto;
+    }
+    .primary-navigation {
+        display: none;
+    }
+    .hamburger-navigation {
+        display: none;
+    }
+    .hamburger-icon {
+        display: block;
+    }
 }
 
-#water-damage-info {
-    background-image: url("home page/images/iphone-1067991_640.jpg");
-    background-size: cover;
-}
 
-#battery-replacement-info {
-    background-image: url("home page/images/tyler-lastovich-rAtzDB6hWrU-unsplash.jpg");
-    background-size: cover; 
-}
 
-#data-recovery-info {
-    background-image: url("home page/images/benjamin-lehman-GNyjCePVRs8-unsplash.jpg");
-    background-size: cover;
-}
-
-#accessories-info {
-    background-image: url("home page/images/lucas-hoang-0_S1K3u6Cmc-unsplash.jpg");
-    background-size: cover;
-}
-
-#speaker-repair-info {
-    background-image: url("home page/images/apple-1284223_640.jpg");
-    background-size: cover;
-}
-
-.grid-card-logo {
-    height: var(--five-column-width);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: space-evenly;
-    transition: all 1s;
-}
-
-.grid-card-logo h3 {
-    font-size: var(--fs-title-small);
-    font-weight: var(--fw-bold);
-}
-
-.grid-card-text {
-    font-size: var(--fs-card);
-    font-weight: var(--fw-bold);
-    opacity: 0;
-    height: var(--five-column-width);
-    text-align: left;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: space-evenly;
-    transition: all 1s;
-}
-
-.grid-card:hover {
-    background: var(--lighter-red-accent);
-}
-
-.grid-card:hover .grid-card-logo {
-    opacity: 0;
-    transform: translateY(-100%);
-}
-
-.grid-card:hover .grid-card-text {
-    background-color: rgba(0, 0, 0, 0.3);
-    opacity: 1; 
-    transform: translateY(-100%);
-}
-
+/*********************************************************************************************
+Footer and footer navigation styles.
+*********************************************************************************************/
 
 /* footer and footer content style */
 .primary-footer{
@@ -576,4 +499,27 @@ header .red-button {
 
 #copyright {
     padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .information-links {
+        text-align: center;
+    }
+    .information-links h4 {
+        margin-top: 50px;
+    }
+    .primary-footer li div {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+    .primary-footer li div img {
+        margin: 10px;
+    }
+    #copyright {
+        margin-top: 50px;
+    }
 }
