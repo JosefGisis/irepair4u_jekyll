@@ -1,12 +1,82 @@
 ---
 permalink: /404.html
-layout: default
+layout: none
 title: Irepair4u 404 - page not found
-style: style.css
+reset: /reset.css
+style: /default_style.css
+secondary_style: /home_page_style.css
 ---
 
-<div class="container">
-  <h1>404</h1>
-  <p>Page not found :</p>
-  <p>The requested page could not be found.</p>
-</div>
+<!-- Irepair4u 404 not found page -->
+<!DOCTYPE html>
+ <html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" type="text/css" href="{{ page.reset }}">
+        <link rel="stylesheet" type="text/css" href="{{ page.style }}">
+        <link rel="stylesheet" type="text/css" href="{{ page.secondary_style }}">
+        <style type="text/css">
+
+           h1 {
+            font-size: 5rem;
+            color: var(--red-accent);
+           }
+           h2 {
+            font-size: 3rem;
+            color: var(--shadow-color);
+            margin-bottom: 1rem;
+           }
+           h3 {
+            font-size: 1.3rem;
+            color: black;
+            margin-bottom: 1rem;
+           }
+
+           @media screen and (max-width: 600px) {
+            h1 {
+              font-size: 2.5rem;
+            }
+            h2 {
+              font-size: 1.8rem;
+            }
+            h3 {
+              font-size: 0.9rem;
+            }
+           }
+
+        </style>
+    </head> 
+
+
+    <body>
+
+
+      <main>
+
+        
+        <section class="404-not-found">
+
+          <div class="container">
+            <div class="singe-column-column">
+
+              <div class="eight-column-width">
+                <h1>404 :/</h1>
+                <h2>Page Not Found</h2>
+                <h3>Click <a href="/">here</a> to be redirected to our home page.</h3>
+                <img src="/images/kostiantyn-li-Fi_nhg5itCw-unsplash.jpg">
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+
+      </main>
+
+
+    </body>
+
+
+ </html>

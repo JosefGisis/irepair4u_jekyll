@@ -14,6 +14,8 @@ function toggleMenu() {
 }
 
 
+
+
 function updateClassHeight(className) {
     let classOccurrences = document.querySelectorAll(className);
     if (classOccurrences.length > 0) {

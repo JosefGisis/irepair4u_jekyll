@@ -1,8 +1,9 @@
+/* Default style for irepair4u  */
+
 /*********************************************************************************************
 Root variables.
 *********************************************************************************************/
 
-/* Variables */
 :root {
     --red-accent: rgb(225, 30, 70);
     --lighter-red-accent: rgba(225, 30, 70, 0.8);
@@ -44,7 +45,6 @@ Root variables.
 General utility class styles.
 *********************************************************************************************/
 
-/* Utility class styling */
 .background-white {
     background-color: white;
 }
@@ -89,10 +89,9 @@ General utility class styles.
 .fs-section-title {
     /* fs-section-title font-size gets special styling */
     font-size: var(--fs-section-title);
-    border-bottom: 2px;
-    border-bottom-style: solid;
-    border-bottom-color: inherit; 
+    border-bottom: 2px solid black;
 }
+
 
 /* Text sizes shrink to accommodate smaller screens */
 @media screen and (max-width: 600px) {
@@ -113,6 +112,7 @@ General utility class styles.
         border-bottom: none;
     }
 }
+
 
 .fw-regular {
     font-weight: var(--fw-regular);
@@ -174,18 +174,22 @@ section {
     padding-block: 2rem; 
 }
 
+
+/* .container keeps all sections within 960 pixels and centered */
 .container {
     width: min(var(--twelve-column-width), 100% - var(--inline-base-padding));
     margin-inline: auto;
     padding-block: 1rem;
 }
 
+/* .services-container is a grid so styling is slightly different */
 .services-container {
     width: min(var(--full-width), 100% - var(--inline-base-padding));
     margin-inline: auto;
     padding-block: 1rem;
 }
 
+/* .single-column-row (really a flex container with a row flex direction) */
 .single-column-row {
     display: flex;
     flex-direction: row;
@@ -194,6 +198,7 @@ section {
     justify-content: space-between;
 }
 
+/* .single-column-column (really a flex container with a column flex direction) */
 .single-column-column {
     display: flex;
     flex-direction: column;
@@ -223,12 +228,14 @@ section {
     padding-block: 2em;
 }
 
-@media screen and (max-width: 600px) {
+/* .four-column is for footer links */
+@media screen and (max-width: 650px) {
     .four-column {
         flex-direction: column;
     } 
 }
 
+/* .three-column-grid shrings sooner because of the size of the grid */
 @media screen and (max-width: 960px) {
     .three-column-grid {
         grid-template-rows: 1fr 1fr 1fr;
@@ -243,16 +250,15 @@ section {
     background-color: var(--red-accent);
     cursor: pointer;
     text-decoration: none;
-    border: 2px;
-    border-style: solid;
-    border-color: var(--red-accent);
+    border: 2px solid var(--red-accent);
     padding: 10px;
     border-radius: 10px;
     transition: all 100ms;
     box-shadow: 4px 8px 4px 0px var(--lighter-shadow-color);
 }
 
-.red-button:hover {
+.red-button:hover,
+.red-button:active {
     background-color: var(--lighter-red-accent);
     transform: translateY(1px);
     box-shadow: 2px 4px 4px 0px var(--shadow-color);
@@ -263,16 +269,15 @@ section {
     background-color: white;
     cursor: pointer;
     text-decoration: none;
-    border: 2px;
-    border-style: solid;
-    border-color: var(--red-accent);
+    border: 2px solid var(--red-accent);
     padding: 10px;
     border-radius: 10px;
     transition: all 100ms;
     box-shadow: 4px 8px 4px 0px var(--lighter-shadow-color);
 }
 
-.inverse-red-button:hover {
+.inverse-red-button:hover,
+.inverse-red-button:active {
     color: var(--lighter-red-accent);
     border-color: var(--lighter-red-accent);
     text-decoration: underline;
@@ -280,7 +285,7 @@ section {
     box-shadow: 2px 4px 4px 0px var(--shadow-color);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .red-button {
         padding: 8px;
     }
@@ -301,7 +306,6 @@ body {
     color: black;
     background-color: white;
 }   
-
 
 
 
@@ -333,11 +337,7 @@ header .red-button {
     padding: 0.8rem;
 }
 
-.nav-link a:hover {
-    color: var(--red-accent);
-    text-decoration: underline;
-}
-
+.nav-link a:hover,
 .nav-link a:active {
     color: var(--red-accent);
     text-decoration: underline;
@@ -350,6 +350,7 @@ header .red-button {
     cursor: pointer;
     position: absolute;
     width: min(35px, 10%);
+    /* positioned at half inline padding to the right */
     right: var(--base-padding);
     background-color: transparent;
 }
@@ -394,17 +395,14 @@ header .red-button {
     text-decoration: none;
 }
 
-.hamburger-navigation a:hover {
-    color: white;
-    background-color: var(--shadow-color);
-}
-
+.hamburger-navigation a:hover,
 .hamburger-navigation a:active {
     color: white;
     background-color: var(--shadow-color);
 }
 
-@media screen and (max-width: 960px) {
+/* Switches to mobile nav design (see javascript) */
+@media screen and (max-width: 940px) {
     .logo img {
         /* Shrings the logo for smaller screens */
         width: min(387px, 80%);
@@ -459,7 +457,7 @@ Footer and footer navigation styles.
     content: "";
     display: inline-block;
     width: 20px;
-    height: 20px;
+    height: auto;
     margin-right: 10px;
     background: url('images/contact-mobile-svgrepo-com.svg');
     background-size: cover; 
@@ -469,7 +467,7 @@ Footer and footer navigation styles.
     content: "";
     display: inline-block;
     width: 20px;
-    height: 20px;
+    height: auto;
     margin-right: 10px;
     background: url('images/contact-mail-svgrepo-com.svg');
     background-size: cover;
@@ -479,7 +477,7 @@ Footer and footer navigation styles.
     content: "";
     display: inline-block;
     width: 20px;
-    height: 20px;
+    height: auto;
     margin-right: 10px;
     background: url('images/contact-map-pin-svgrepo-com.svg');
     background-size: cover;
@@ -493,7 +491,8 @@ Footer and footer navigation styles.
     padding-right: 2em;
 }
 
-.primary-footer a:hover {
+.primary-footer a:hover,
+.primary-footer a:active {
     text-decoration: underline;
 }
 
@@ -501,7 +500,7 @@ Footer and footer navigation styles.
     padding: 20px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .information-links {
         text-align: center;
     }
@@ -521,5 +520,49 @@ Footer and footer navigation styles.
     }
     #copyright {
         margin-top: 50px;
+    }
+}
+
+
+
+/*********************************************************************************************
+Banner styling.
+*********************************************************************************************/
+
+/* banner and banner content style */
+.banner {
+    padding-block: 1em;
+    border-bottom: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--shadow-color);
+}
+
+.banner h1,
+.banner h2, 
+.banner h3, 
+.banner h4 {
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+
+
+
+/*********************************************************************************************
+Background icon styling.
+*********************************************************************************************/
+
+.background-image img{
+    position: absolute;
+    transform: rotate(-10deg);
+    top: 0px;
+    left: 55%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+@media screen and (max-width: 750px) {
+    .background-image img {
+        display: none;
     }
 }

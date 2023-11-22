@@ -1,44 +1,9 @@
-/*********************************************************************************************
-Banner styling.
-*********************************************************************************************/
-
-/* banner and banner content style */
-.banner {
-    padding-block: 1em;
-    border-bottom: 5px;
-    border-bottom-style: solid;
-    border-bottom-color: var(--shadow-color);
-}
-
-.banner h1,
-.banner h2, 
-.banner h3, 
-.banner h4 {
-    text-align: center;
-    padding-bottom: 1em;
-}
-
-
 
 /*********************************************************************************************
 Home page style.
 *********************************************************************************************/
 
 /* Page content style */
-#about-simple {
-    background-image: url('/home page/images/irepair4u_logo_300.svg');
-    background-size: cover;
-}
-
-.svg-background {
-    position: absolute;
-    transform: rotate(-10deg);
-    top: 0px;
-    left: 55%;
-    z-index: -1;
-    opacity: 0.3;
-}
-
 #about-simple h1, 
 #about-simple h2, 
 #about-simple h3,
@@ -128,32 +93,32 @@ Home page style.
 
 
 #screen-replacement-info {
-    background-image: url("home page/images/age-barros-fKAjOxgZNPg-unsplash.jpg");
+    background-image: url("images/age-barros-fKAjOxgZNPg-unsplash.jpg");
     background-size: cover;
 }
 
 #water-damage-info {
-    background-image: url("home page/images/iphone-1067991_640.jpg");
+    background-image: url("images/iphone-1067991_640.jpg");
     background-size: cover;
 }
 
 #battery-replacement-info {
-    background-image: url("home page/images/tyler-lastovich-rAtzDB6hWrU-unsplash.jpg");
+    background-image: url("images/tyler-lastovich-rAtzDB6hWrU-unsplash.jpg");
     background-size: cover; 
 }
 
 #data-recovery-info {
-    background-image: url("home page/images/benjamin-lehman-GNyjCePVRs8-unsplash.jpg");
+    background-image: url("images/benjamin-lehman-GNyjCePVRs8-unsplash.jpg");
     background-size: cover;
 }
 
 #accessories-info {
-    background-image: url("home page/images/lucas-hoang-0_S1K3u6Cmc-unsplash.jpg");
+    background-image: url("images/lucas-hoang-0_S1K3u6Cmc-unsplash.jpg");
     background-size: cover;
 }
 
 #speaker-repair-info {
-    background-image: url("home page/images/apple-1284223_640.jpg");
+    background-image: url("images/apple-1284223_640.jpg");
     background-size: cover;
 }
 
@@ -166,9 +131,6 @@ Home page style.
     align-content: center;
     justify-content: space-evenly;
     transition: all 1s;
-}
-
-.grid-card-logo h3 {
 }
 
 .grid-card-logo img {
@@ -204,6 +166,8 @@ Home page style.
     transform: translateY(-100%);
 }
 
+
+/* Text needs special conditions to fit in service cards */
 @media screen and (max-width: 600px) {
     .grid-card-logo h3 {
         font-size: var(--fs-column);

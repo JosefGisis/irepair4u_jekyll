@@ -1,14 +1,22 @@
 ---
 layout: default
 title: Irepair4u Home
+
 # All pages require a at least a style and secondary style
+
 reset: reset.css
 style: default_style.css
 secondary_style: home_page_style.css
+
+text: home_text.yaml
 ---
 
 <!-- main -->
 <main>
+
+    <div class="background-image">
+        <img src="images/irepair4u_icon_red_transparent_300x300.svg" width="300px" height="300px">
+    </div>
           
 
     <!-- about-simple provides a simple slogan about this business -->
@@ -22,13 +30,12 @@ secondary_style: home_page_style.css
                 </div>
 
                 <div class="nine-column-width">
-                    <p class="fs-column fw-regular">iREPAiR4U has been serving Lakewood, Jackson and neighboring communities for over 7 years. We provide fast,
-                        professional, and courteous services at affordable prices. Give us a call so we may assist you!</p>
+                    <p class="fs-column fw-regular">{{ data.text.banner }}</p>
                 </div>
 
                 <div>
-                    <a href="../contact us page/Irepair4u_contact_page.html"><button class="red-button" type="Button">CONTACT US</button></a>
-                    <a class="fw-bold" href="../about page/Irepair4u_about_page.html"><button class="inverse-red-button" type="Button">ABOUT US</button></a>
+                    <a href="contact.html"><button class="red-button" type="Button">CONTACT US</button></a>
+                    <a class="fw-bold" href="about.html"><button class="inverse-red-button" type="Button">ABOUT US</button></a>
                 </div>
 
                 <div>
@@ -52,12 +59,12 @@ secondary_style: home_page_style.css
                 </div>
             </div>
 
+
             <!-- Rather than using a grid, this section contains three double column divs-->
             <div class="double-column">
                 <div class="double-column-text">
                     <h3 class="fs-title fw-semi-bold six-column-width">OUR STORY</h3>
-                    <p class="fs-card fw-regular six-column-width"> irepair4u started fixing phones in 2016 in Lakewood, NJ, and soon gained a reputation for its quality work and friendly service. Since then, our 
-                        business has grown and our workshop is now located in beautiful Jackson, New Jersey, right off clearstream, only five minutes out of lakewood.</p>
+                    <p class="fs-card fw-regular six-column-width">{{ data.text.our_story }}</p>
                 </div>
                 <div class="double-column-image six-column-width">
                     <img src="images/about-us-3-2-460x307.jpg" width="460" height="307" alt="Image of a phone being repaired surrounded by phone repair tools" title="Image of a phone being repaired surrounded by phone repair tools">
@@ -70,17 +77,14 @@ secondary_style: home_page_style.css
                 </div>
                 <div class="double-column-text">
                     <h3 class="fs-title fw-semi-bold">COVERAGE</h3>
-                    <p class="fs-card fw-regular six-column-width">We offer a broad range of services for a wide variety of devices. We repair all popular makes and models, such as
-                        Apple, Samsung, LG, Google, OnePlus, Motorala, and more. We would love to work with you, so if you don't see a device or service you need, please give us call!</p>
+                    <p class="fs-card fw-regular six-column-width">{{ data.text.coverage }}</p>
                 </div>
             </div>
 
             <div class="double-column">
                 <div class="double-column-text">
                     <h3 class="fs-title fw-semi-bold six-column-width">CUSTOMER SERVICE</h3>
-                    <p class="fs-card fw-regular six-column-width">Since our start, we have set customer service, affordability, and quality work as the cornerstone of our business. 
-                        We pride ourselves in passing savings on to our customers without compromising on the quality of our work and all while providing a warm and welcoming
-                        environment.</p>
+                    <p class="fs-card fw-regular six-column-width">{{ data.text.customer_service }}</p>
                 </div>
                 <div class="double-column-image">
                     <img src="images/trust-us1-3-2-460x307.jpg" width="460" height="307" alt="image of repairman fixing a phone" alt="image of repairman fixing a phone">
@@ -110,7 +114,7 @@ secondary_style: home_page_style.css
                         <h3 class="fs-title-small fw-semi-bold">SCREEN REPLACEMENT</h3>
                     </div>
                     <div class="grid-card-text">
-                        <p class="fs-card fw-regular">Phone screen broken or cracked? No worries! Screen repairs are our specialty. We will have your phone looking and working line new in no time.</p>
+                        <p class="fs-card fw-regular">{{ data.text.screen_replacement }}</p>
                     </div>
                 </div>
 
@@ -120,7 +124,7 @@ secondary_style: home_page_style.css
                         <h3 class="fs-title-small fw-semi-bold">WATER DAMAGE</h3>
                     </div>
                     <div class="grid-card-text">
-                        <p class="fs-card fw-regular">Accidents happen. Bring us your water damaged phone so we can assist you. In the meantime, click here to see what you can do to increase your phone's chance of surviving.</p>
+                        <p class="fs-card fw-regular">{{ data.text.water_damage }}</p>
                     </div>
                 </div>
 
@@ -130,7 +134,7 @@ secondary_style: home_page_style.css
                         <h3 class="fs-title-small fw-semi-bold">BATTERY REPLACEMENT</h3>
                     </div>
                     <div class="grid-card-text">
-                        <p class="fs-card fw-regular">If your phone won't charge or your battery is draining too quickly, we offer fast and affordable battery replacements and charging port repairs.</p>
+                        <p class="fs-card fw-regular">{{ date.text.battery_replacement }}</p>
                     </div>
                 </div>
 
@@ -140,7 +144,7 @@ secondary_style: home_page_style.css
                         <h3 class="fs-title-small fw-semi-bold">DATA RECOVERY</h3>
                     </div>
                     <div class="grid-card-text">
-                        <p class="fs-card fw-regular">Need to save precious data? We can help you recover and preserve all your invaluable photos, videos, messages, and other media from your device.</p>
+                        <p class="fs-card fw-regular">{{ data.text.data_recovery }}</p>
                     </div>
                 </div>
 
@@ -150,7 +154,7 @@ secondary_style: home_page_style.css
                         <h3 class="fs-title-small fw-semi-bold">ACCESSORIES</h3>
                     </div>
                     <div class="grid-card-text">
-                        <p class="fs-card fw-regular">We offer accessories for your mobile devices, such as screen protectors, chargers, car mounts, and more. We also have cases for most popular smartphone makes and models.</p>
+                        <p class="fs-card fw-regular">{{ data.text.accessories }}</p>
                     </div>
                 </div>
 
@@ -160,7 +164,7 @@ secondary_style: home_page_style.css
                         <h3 class="fs-title-small fw-semi-bold">SPEAKER REPAIR</h3>
                     </div>
                     <div class="grid-card-text">
-                        <p class="fs-card fw-regular">Having a hard time hearing other during your calls? Speakers can go weak over time. We can improve the quality of your microphone and speakers.</p>
+                        <p class="fs-card fw-regular">{{ data.text.speaker_repairs }}</p>
                     </div>
                 </div>
             </div>
@@ -168,7 +172,7 @@ secondary_style: home_page_style.css
             <!-- Message under service grid -->
             <div class="single-column">
                 <div class="nine-column-width">
-                    <p class="fs-column fw-bold">We offer many more services. For a full listing, check out our <a href="../services page/Irepair4u_services_page.html">services page</a>.</p>
+                    <p class="fs-column fw-bold">We offer many more services. For a full listing, check out our <a href="services.html">services page</a>.</p>
                 </div>
             </div>
 
@@ -186,8 +190,7 @@ secondary_style: home_page_style.css
 
             <div>
                 <h2 class="fs-title fw-semi-bold">Free 90-Day Warranty!</h2>
-                <p class="fs-card fw-regular">All our phone repair services are backed by our free 90-day warranty. We guarantee the quality of our work. If you 
-                    encounter issue connected to the repair we conducted, we've got you covered.</p>
+                <p class="fs-card fw-regular">{{ data.text.warranty }}</p>
             </div>
 
         </div>
