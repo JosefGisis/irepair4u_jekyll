@@ -8,6 +8,7 @@
 
 # key-value pairs are constructed using ===> key: value
 # key-values where the values are multi-line strings are cunstruced using ===> key: > multi-line string 
+# lists are created by starting of the first key-value with a dash, as such ===> - key: value
 
 banner: >
   iREPAiR4U has been serving Lakewood, Jackson and neighboring communities for over 7 years. We provide fast, professional,

@@ -8,42 +8,39 @@ secondary_style: home_page_style.css
 text: about_text
 ---
 
-<!-- about-simple provides a simple slogan about this business -->
-<section id="about-simple">
-    <div class="container">
 
+<section id="about-page">
+
+    <div class="container">
         <div class="single-column-column">
-    
+
             <div class="eight-column-width">
-                <h1 class="fs-section-title fw-semi-bold">ABOUT US</h1>
-            </div>
-
-            <div class="twelve-column-width">
-                <h2 class="fs-title">Our Start</h2>
-                <p class="fs-column fw-regular">{{ site.data[page.text].our_start }}</p>
-            </div>
-
-            <div class="twelve-column-width">
-                <h2 class="fs-title">What We Do</h2>
-                <p class="fs-column fw-regular">{{ site.data[page.text].what_we_do }}</p>
+                <h1 class="fs-section-title fw-semi-bold text-center"> ABOUT US </h1>
             </div>
 
         </div>
-
     </div>
-</section>
 
-
-<section id="terms-and-conditions">
     <div class="container">
+        <div class="single-column-column">
 
-        <div class="singe-column-column">
-            <h1>ABOUT US</h1>
-            <p>
-                Some information about our business.
-            </p>
-
+            {% for entry in site.data[page.text] %}
+                <div class="nine-column-width padding-block-small">
+                    <h3 class="fs-title-small fw-bold padding-block-small"> {{entry.title }} </h1>
+                    <p class="fs-card fw-regular"> {{ entry.paragraph }}</p>
+                </div>
+            {% endfor %}
+            
         </div>
-
     </div>
+
+    <div class="container">
+        <div class="ten-column-width background-gray">
+            <div class="nine-column-width">
+                <h2 class="fs-title fw-semi-bold text-center padding-block-small"> TERMS AND CONDITIONS</h2>
+            </div>
+            <p class="padding-inline-large padding-block-medium"></p>
+        </div>
+    </div>
+
 </section>

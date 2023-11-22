@@ -33,6 +33,7 @@ Root variables.
     --six-column-width: 460px;
     --eight-column-width: 620px;
     --nine-column-width: 700px;
+    --ten-column-width: 780px;
     --twelve-column-width: 940px;
     --full-width: 960px;
 
@@ -146,13 +147,16 @@ General utility class styles.
 
 .eight-column-width {
     max-width: var(--eight-column-width);
-    text-align: center;
     margin: 0 auto;
 }
 
 .nine-column-width {
     max-width: var(--nine-column-width);
-    text-align: center;
+    margin: 0 auto;
+}
+
+.ten-column-width {
+    max-width: var(--ten-column-width);
     margin: 0 auto;
 }
 
@@ -162,6 +166,36 @@ General utility class styles.
 
 .full-width {
     max-width: var(--full-width);
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+
+.padding-block-small {
+    padding-block: 1rem;
+}
+
+.padding-block-medium {
+    padding-block: 2rem;
+}
+
+.padding-block-large {
+    padding-block: 3rem;
+}
+
+.padding-inline-small {
+    padding-inline: 1rem;
+}
+
+.padding-inline-medium {
+    padding-inline: 2rem;
+}
+
+.padding-inline-large {
+    padding-inline: 3rem;
 }
 
 
@@ -305,6 +339,7 @@ body {
     font-size: var(--fs-body);
     color: black;
     background-color: white;
+    overflow-wrap: break-word;
 }   
 
 
@@ -457,7 +492,7 @@ Footer and footer navigation styles.
     content: "";
     display: inline-block;
     width: 20px;
-    height: auto;
+    height: 20px;
     margin-right: 10px;
     background: url('images/contact-mobile-svgrepo-com.svg');
     background-size: cover; 
@@ -467,7 +502,7 @@ Footer and footer navigation styles.
     content: "";
     display: inline-block;
     width: 20px;
-    height: auto;
+    height: 20px;
     margin-right: 10px;
     background: url('images/contact-mail-svgrepo-com.svg');
     background-size: cover;
@@ -477,7 +512,7 @@ Footer and footer navigation styles.
     content: "";
     display: inline-block;
     width: 20px;
-    height: auto;
+    height: 20px;
     margin-right: 10px;
     background: url('images/contact-map-pin-svgrepo-com.svg');
     background-size: cover;

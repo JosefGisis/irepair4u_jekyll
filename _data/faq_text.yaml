@@ -3,10 +3,6 @@
 # Text for this page is contained using mapping, a collection of key-value pairs. Alter the 
 # the map VALUES (not the keys, as that will affect the text and page layout) to change the text on the page. 
 
-# The faq page uses liquid markup to display all yaml items, so add more items (question and answer) as maps to add more
-# questions and answers on the faq page. Ensure you mimic the layout of the map, so the additional items appear as intended, 
-# if at all.
-
 # key-value pairs are constructed using ===> key: value
 # key-values where the values are multi-line strings are cunstruced using ===> key: > multi-line string 
 # mapping is done by combining several key-value pairs as such:
@@ -14,8 +10,11 @@
 #   key1: value1
 #   key2: value2
 #   keyNth: valueNth
+# lists are created by starting of the first key-value with a dash, as such ===> - key: value
 
 # See following yaml for an example.
+
+# Make sure to copy format when adding items.
 
 
 - Q: >
