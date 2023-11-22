@@ -1,0 +1,79 @@
+# This is text for the faq page.
+
+# Text for this page is contained using mapping, a collection of key-value pairs. Alter the 
+# the map VALUES (not the keys, as that will affect the text and page layout) to change the text on the page. 
+
+# The faq page uses liquid markup to display all yaml items, so add more items (question and answer) as maps to add more
+# questions and answers on the faq page. Ensure you mimic the layout of the map, so the additional items appear as intended, 
+# if at all.
+
+# key-value pairs are constructed using ===> key: value
+# key-values where the values are multi-line strings are cunstruced using ===> key: > multi-line string 
+# mapping is done by combining several key-value pairs as such:
+# map name: 
+#   key1: value1
+#   key2: value2
+#   keyNth: valueNth
+
+# See following yaml for an example.
+
+
+- Q: >
+    Q. My phone fell into water. Should I put it in rice?
+  A: >
+    A. Save your rice for cooking. Rice not only does not help, but it can also cause more damage by making your charging
+    port dirty. When your phone falls into water you need to bring it to a phone repair shop, so they can open it and dry it
+    out. However, you can improve your phone’s chances of surviving by not pressing any buttons and just submerging it in
+    rubbing alcohol (70% alcohol, plus). This may seem counterintuitive, but it is not the water itself that causes your phone
+    to shortcuircuit; rather, it is the minerals found in water (something rubbing alcohol does not have). The rubbing alcohol 
+    may save your phone while you are waiting to bring it to a repair shop.
+
+
+- Q: >
+    Q. Do you fix flip phones?
+  A: >
+    A. Yes we fix most flip phones. Give us a call, so we can provide more information about our services.
+
+
+- Q: >
+    Q. Are your replacement parts original?
+  A: >
+    A. Unless we can salvage a part from another phone, all parts are aftermarket. This is the case because top phone and
+    tablet manufacturers do not sell original parts for their products.
+
+ 
+- Q: >
+    Q. Which repairs are covered by your 90 day warranty?
+  A: >
+    A. All repairs! We stand behind our work. So if something we fixed stops working, bring it back to us and we’ll make
+    it right.
+
+
+- Q: >
+    Q. You recently fixed my cracked screen, but now my speaker is no longer working. Is that covered by your warranty?
+  A: > 
+    A. Sorry. No. Unless the speaker has stopped working due to the repair we conducted. The same goes for any damages
+    not related to our work.
+
+
+- Q: >
+    Q. What happens if Irepair4u cannot save my damaged phone? Do I still need to pay for the attempt?
+  A: >
+    A. Depends. With some repairs, such as screen repairs, battery replacements,speaker repairs, etc., we will not charge
+    you if we cannot fix your device. However, when it comes to water damage repairs, it is uncertain if the phone can be
+    recovered and oftentimes there is nothing we can do to save the device. With those kinds of services we may still
+    charge a fee.
+
+
+- Q: >
+    Q. Can I bring my phone over any time during business hours?
+  A: >
+    A. You can, but we would recommend calling us first, so we can make time for you and provide more information about your
+    repair. We also may not cover your device or have the necessary parts in stock at the moment, so we suggest giving us a
+    call beforehand.
+
+
+- Q: >
+    Q. Do you list repair prices?
+  A: >
+    A. Unfortunately, no. Prices may vary depending on fluctuating prices for parts. Give us a call, so we can give you a quote!

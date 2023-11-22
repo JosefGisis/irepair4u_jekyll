@@ -4,6 +4,8 @@ title: Irepair4u About
 reset: reset.css
 style: default_style.css
 secondary_style: home_page_style.css
+
+text: about_text
 ---
 
 <!-- about-simple provides a simple slogan about this business -->
@@ -18,13 +20,12 @@ secondary_style: home_page_style.css
 
             <div class="twelve-column-width">
                 <h2 class="fs-title">Our Start</h2>
-                <p class="fs-column fw-regular">IRepair4u's founder and owner, Mattis Gisis, started fixing phones in 2016 from his apartment in Lakewood, New Jersey. His buiness quickly grew and gained
-                    a reputation in Lakewood and neighbouring communities for its quality work and friendly service. Since then, IRepaiu4u has grown and is now located in Jackson, New Jersey, only five minutes out of lakewood.</p>
+                <p class="fs-column fw-regular">{{ site.data[page.text].our_start }}</p>
             </div>
 
             <div class="twelve-column-width">
                 <h2 class="fs-title">What We Do</h2>
-                <p class="fs-column fw-regular">We primarily fix broken smartphones: everything from cracked screen to failing battery to speakers. However, we also serve many other devices such as tablets and p </p>
+                <p class="fs-column fw-regular">{{ site.data[page.text].what_we_do }}</p>
             </div>
 
         </div>

@@ -1,6 +1,16 @@
-email_info: >
+# This is text for the contact page.
 
-When emailing us, please provide the make and model of your device, as well as the issue or repair of your concern.
-You can find information about your device in settings/about. If you are still unsure, or cannot access your device’s
-settings, no problem, just send us whatever information you do have about your device. Also, please put your name
-as a comment, so we can contact you sooner and communicate for efficiently.
+# Text for the contact page is contained in key value pairs. Alter the values (not the keys or the 
+# text will not appear on the web page) to change the text on the page. 
+ 
+# The contact page has a fixed layout, so adding any key-value pairs will not work unless you update the liquid markup and html
+# on the corresponding html file. 
+
+# key-value pairs are constructed using ===> key: value
+# key-values where the values are multi-line strings are cunstruced using ===> key: > multi-line string 
+
+email_info: >
+  When emailing us, please provide the make and model of your device, as well as the issue or repair of your concern.
+  You can find information about your device in settings/about. If you are still unsure, or cannot access your device’s
+  settings, no problem, just send us whatever information you do have about your device. Also, please put your name
+  as a comment, so we can contact you sooner and communicate for efficiently.

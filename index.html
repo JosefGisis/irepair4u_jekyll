@@ -8,7 +8,7 @@ reset: reset.css
 style: default_style.css
 secondary_style: home_page_style.css
 
-text: home_text.yaml
+text: home_text
 ---
 
 <!-- main -->
@@ -30,12 +30,12 @@ text: home_text.yaml
                 </div>
 
                 <div class="nine-column-width">
-                    <p class="fs-column fw-regular">{{ data.text.banner }}</p>
+                    <p class="fs-column fw-regular">{{ site.data[page.text].banner }}</p>
                 </div>
 
                 <div>
-                    <a href="contact.html"><button class="red-button" type="Button">CONTACT US</button></a>
-                    <a class="fw-bold" href="about.html"><button class="inverse-red-button" type="Button">ABOUT US</button></a>
+                    <a href="/contact.html"><button class="red-button" type="Button">CONTACT US</button></a>
+                    <a class="fw-bold" href="/about.html"><button class="inverse-red-button" type="Button">ABOUT US</button></a>
                 </div>
 
                 <div>
@@ -64,7 +64,7 @@ text: home_text.yaml
             <div class="double-column">
                 <div class="double-column-text">
                     <h3 class="fs-title fw-semi-bold six-column-width">OUR STORY</h3>
-                    <p class="fs-card fw-regular six-column-width">{{ data.text.our_story }}</p>
+                    <p class="fs-card fw-regular six-column-width">{{ site.data[page.text].our_story }}</p>
                 </div>
                 <div class="double-column-image six-column-width">
                     <img src="images/about-us-3-2-460x307.jpg" width="460" height="307" alt="Image of a phone being repaired surrounded by phone repair tools" title="Image of a phone being repaired surrounded by phone repair tools">
@@ -77,14 +77,14 @@ text: home_text.yaml
                 </div>
                 <div class="double-column-text">
                     <h3 class="fs-title fw-semi-bold">COVERAGE</h3>
-                    <p class="fs-card fw-regular six-column-width">{{ data.text.coverage }}</p>
+                    <p class="fs-card fw-regular six-column-width">{{ site.data[page.text].coverage }}</p>
                 </div>
             </div>
 
             <div class="double-column">
                 <div class="double-column-text">
                     <h3 class="fs-title fw-semi-bold six-column-width">CUSTOMER SERVICE</h3>
-                    <p class="fs-card fw-regular six-column-width">{{ data.text.customer_service }}</p>
+                    <p class="fs-card fw-regular six-column-width">{{ site.data[page.text].customer_service }}</p>
                 </div>
                 <div class="double-column-image">
                     <img src="images/trust-us1-3-2-460x307.jpg" width="460" height="307" alt="image of repairman fixing a phone" alt="image of repairman fixing a phone">
@@ -114,7 +114,7 @@ text: home_text.yaml
                         <h3 class="fs-title-small fw-semi-bold">SCREEN REPLACEMENT</h3>
                     </div>
                     <div class="grid-card-text">
-                        <p class="fs-card fw-regular">{{ data.text.screen_replacement }}</p>
+                        <p class="fs-card fw-regular">{{ site.data[page.text].screen_replacement }}</p>
                     </div>
                 </div>
 
@@ -124,7 +124,7 @@ text: home_text.yaml
                         <h3 class="fs-title-small fw-semi-bold">WATER DAMAGE</h3>
                     </div>
                     <div class="grid-card-text">
-                        <p class="fs-card fw-regular">{{ data.text.water_damage }}</p>
+                        <p class="fs-card fw-regular">{{ site.data[page.text].water_damage }}</p>
                     </div>
                 </div>
 
@@ -134,7 +134,7 @@ text: home_text.yaml
                         <h3 class="fs-title-small fw-semi-bold">BATTERY REPLACEMENT</h3>
                     </div>
                     <div class="grid-card-text">
-                        <p class="fs-card fw-regular">{{ date.text.battery_replacement }}</p>
+                        <p class="fs-card fw-regular">{{ site.data[page.text].battery_replacement }}</p>
                     </div>
                 </div>
 
@@ -144,7 +144,7 @@ text: home_text.yaml
                         <h3 class="fs-title-small fw-semi-bold">DATA RECOVERY</h3>
                     </div>
                     <div class="grid-card-text">
-                        <p class="fs-card fw-regular">{{ data.text.data_recovery }}</p>
+                        <p class="fs-card fw-regular">{{ site.data[page.text].data_recovery }}</p>
                     </div>
                 </div>
 
@@ -154,7 +154,7 @@ text: home_text.yaml
                         <h3 class="fs-title-small fw-semi-bold">ACCESSORIES</h3>
                     </div>
                     <div class="grid-card-text">
-                        <p class="fs-card fw-regular">{{ data.text.accessories }}</p>
+                        <p class="fs-card fw-regular">{{ site.data[page.text].accessories }}</p>
                     </div>
                 </div>
 
@@ -164,7 +164,7 @@ text: home_text.yaml
                         <h3 class="fs-title-small fw-semi-bold">SPEAKER REPAIR</h3>
                     </div>
                     <div class="grid-card-text">
-                        <p class="fs-card fw-regular">{{ data.text.speaker_repairs }}</p>
+                        <p class="fs-card fw-regular">{{ site.data[page.text].speaker_repair }}</p>
                     </div>
                 </div>
             </div>
@@ -172,7 +172,7 @@ text: home_text.yaml
             <!-- Message under service grid -->
             <div class="single-column">
                 <div class="nine-column-width">
-                    <p class="fs-column fw-bold">We offer many more services. For a full listing, check out our <a href="services.html">services page</a>.</p>
+                    <p class="fs-column fw-bold">We offer many more services. For a full listing, check out our <a href="/services.html">services page</a>.</p>
                 </div>
             </div>
 
@@ -190,7 +190,7 @@ text: home_text.yaml
 
             <div>
                 <h2 class="fs-title fw-semi-bold">Free 90-Day Warranty!</h2>
-                <p class="fs-card fw-regular">{{ data.text.warranty }}</p>
+                <p class="fs-card fw-regular">{{ site.data[page.text].warranty }}</p>
             </div>
 
         </div>

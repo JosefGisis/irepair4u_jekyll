@@ -3,11 +3,36 @@ layout: default
 title: Irepair4u FAQ
 reset: reset.css
 style: default_style.css
-secondary_style: home_page_style.css
+text: faq_text
+secondary_style: faq_page_style.css
 ---
 
-<section>
+
+<section id="faq">
     <div class="container">
-        <p>This is the frequently asked questions page</p>
+        <div class="single-column-column">
+            <div class="eight-column-width">
+                <h1 class="fs-section-title fw-semi-bold"> FAQ </h1>
+            </div>
+        </div>
     </div>
+
+    <div class="container">
+        <div class="eight-column-width">
+            <h3 class="fs-title-small fw-semi-bold">Here are some questions are customers frequently ask.</h3>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="single-column-column">
+            <div class="twelve-column-width">
+                {% for entry in site.data.faq_text %}
+                    <div class="q-and-a">
+                        <h3 class="fs-column fw-bold"> {{entry.Q }} </h1>
+                        <p class="fs-card fw-regular"> {{ entry.A }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+    </div>
+
 </section>
