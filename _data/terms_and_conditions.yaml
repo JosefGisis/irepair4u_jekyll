@@ -1,0 +1,67 @@
+# This is text for the about page. 
+
+# Text for this page is contained in key value pairs. Alter the values (not the keys or the 
+# text will not appear on the web page) to change the text on the page. 
+
+# key-value pairs are constructed using ===> key: value
+# key-values where the values are multi-line strings are cunstruced using ===> key: > multi-line string 
+# lists are created by starting of the first key-value with a dash, as such ===> - key: value
+
+# Make sure to copy format when adding items.
+
+- title: Service Agreement
+  paragraph:
+  - clause: >
+      - The customer agrees to the terms and conditions outlined herein upon availing phone repair services
+      from iRepair4U LLC.
+  - clause: > 
+      - iRepair4U LLC will provide repair services as described in the service request.
+  - clause: >
+      - iRepair4U LLC will assess the device and inform the customer of the repair options and costs.
+
+
+- title: Cost and Payment
+  paragraph:
+  - clause: >
+      - Repair costs include parts, labor, and any additional services agreed upon.
+  - clause: > 
+      - Payment is due upon completion of the repair.
+  - clause: >
+      - iRepair4U LLC reserves the right to withhold the repaired device until payment is received.
+
+
+- title: Warranty
+  paragraph:
+  - clause: >
+      - Repairs are covered by a 90-day warranty against defects in workmanship and materials.
+  - clause: > 
+      - This warranty does not cover damage resulting from mishandling or unauthorized modifications.
+
+
+- title: Customer Responsibilities
+  paragraph:
+  - clause: >
+      - Customers are responsible for backing up their data before submitting devices for repair.
+  - clause: > 
+      - iRepair4U LLC is not liable for any loss of data during the repair process.
+
+
+- title: Turnaround Time
+  paragraph:
+  - clause: >
+      - iRepair4U LLC will make reasonable efforts to complete repairs in a timely manner.
+  - clause: > 
+      - Delays may occur due to unforeseen circumstances, and iRepair4U LLC will communicate any changes in
+      the estimated completion time.
+
+
+- title: Liability
+  paragraph:
+  - clause: >
+      - iRepair4U LLC is not liable for any indirect, consequential, or incidental damages.
+  - clause: > 
+      - The total liability of iRepair4U LLC shall not exceed the total amount paid by the customer for the repair
+      services.
+
+
+- title: By availing of our phone repair services, the customer acknowledges and agrees to these terms and conditions.

@@ -32,7 +32,7 @@ text: faq_text
 
             {% for entry in site.data[page.text] %}
                 <div class="nine-column-width padding-block-small">
-                    <h3 class="fs-column fw-bold padding-block-small"> {{entry.Q }} </h1>
+                    <h3 class="fs-column fw-bold padding-block-small"> {{entry.Q }} </h3>
                     <p class="fs-card fw-regular"> {{ entry.A }}</p>
                 </div>
             {% endfor %}

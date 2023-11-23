@@ -34,12 +34,27 @@ text: about_text
         </div>
     </div>
 
+</section>
+
+<section id="terms-and-conditions">
+
     <div class="container">
-        <div class="ten-column-width background-gray">
+        <div class="ten-column-width background-gray padding-inline-small">
             <div class="nine-column-width">
                 <h2 class="fs-title fw-semi-bold text-center padding-block-small"> TERMS AND CONDITIONS</h2>
             </div>
-            <p class="padding-inline-large padding-block-medium"></p>
+
+            <div>
+                {% for entry in site.data.terms_and_conditions %}
+                    <div class="nine-column-width padding-block-small">
+                        <h3 class="fs-column fw-bold padding-block-small"> {{ entry.title }} </h3>
+                        {% for clause in entry.paragraph %}
+                            <p class="fs-card fw-regular padding-block-smaller">{{ clause.clause }}</p>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+
         </div>
     </div>
 
