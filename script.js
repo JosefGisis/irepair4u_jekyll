@@ -4,11 +4,11 @@ function toggleMenu() {
 
     if (hamburgerNavigation.style.display === 'block') {
         hamburgerNavigation.style.display = 'none';
-        hamburgerBars.forEach(bar => bar.style.margin = '9px 0');
+        hamburgerBars.forEach(bar => bar.style.margin = '4px 0');
         hamburgerBars.forEach(bar => bar.style.height = '5px');
     } else {
         hamburgerNavigation.style.display = 'block';
-        hamburgerBars.forEach(bar => bar.style.margin = '4px 0');
+        hamburgerBars.forEach(bar => bar.style.margin = '9px 0');
         hamburgerBars.forEach(bar => bar.style.height = '5px');
     }
 }
