@@ -1,34 +1,42 @@
 ---
 layout: default
 title: Irepair4u FAQ
+
 reset: reset.css
-style: default_style.css
+style: style.css
+secondary_style: secondary_style.css
+
 text: faq_text
 ---
 
 
+<!-- faq page contents -->
 <section id="faq">
 
     <div class="container">
-        <div class="single-column-column">
 
+        <div class="single-column-column">
             <div class="eight-column-width">
                 <h1 class="fs-section-title fw-semi-bold text-center"> FAQ </h1>
             </div>
-
         </div>
+
     </div>
 
     <div class="container">
-        <div class="eight-column-width">
 
-            <h3 class="fs-title-small fw-semi-bold text-center">Here are some questions are customers frequently ask.</h3>
-        
+        <div class="single-column-column">
+            <div class="eight-column-width">
+                <h3 class="fs-title-small fw-semi-bold text-center">Here are some questions are customers frequently ask.</h3>
+            </div>
         </div>
+
     </div>
 
     <div class="container">
         <div class="single-column-column">
+
+            <!-- liquid markup iterates over a yaml file containing questions and answers -->
 
             {% for entry in site.data[page.text] %}
                 <div class="nine-column-width padding-block-small">

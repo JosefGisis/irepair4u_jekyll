@@ -1,11 +1,16 @@
 ---
 layout: default
 title: Irepair4u Contact
+
 reset: reset.css
-style: default_style.css
+style: style.css
+secondary_style: secondary_style.css
+
 text: contact_text
 ---
 
+
+<!-- contact us page contents -->
 <section id="contact-us">
 
     <div class="container">
@@ -23,6 +28,8 @@ text: contact_text
     <div class="container">
         <div class="single-column-column">
 
+            <!-- liquid markup retrieves text from a yaml file -->
+
             <div class="nine-column-width">
                 <h2 class="fs-title-small fw-semi-bold padding-block-small">Give us a call at <a href="tel:+7323303038">(732).330.3038</a></h2>
                 <p class="fs-card fw-regular"> {{ site.data[page.text].phone_info }}</p>
@@ -33,6 +40,7 @@ text: contact_text
         </div>
     </div>
 
+    <!-- image and banner at bottom of contact page -->
     <div class="container">
         <div class="single-column-column">
 

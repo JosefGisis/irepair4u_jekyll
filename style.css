@@ -1,4 +1,4 @@
-/* Default style for irepair4u  */
+/* style for irepair4u  */
 
 /*********************************************************************************************
 Root variables.
@@ -147,21 +147,22 @@ General utility class styles.
 
 .eight-column-width {
     max-width: var(--eight-column-width);
-    margin: 0 auto;
+    margin-inline: auto;
 }
 
 .nine-column-width {
     max-width: var(--nine-column-width);
-    margin: 0 auto;
+    margin-inline: auto;
 }
 
 .ten-column-width {
     max-width: var(--ten-column-width);
-    margin: 0 auto;
+    margin-inline: auto;
 }
 
 .twelve-column-width {
     max-width: var(--twelve-column-width);
+    margin-inline: auto;
 }
 
 .full-width {

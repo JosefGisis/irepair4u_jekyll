@@ -1,14 +1,15 @@
 ---
 layout: default
 title: Irepair4u About
+
 reset: reset.css
-style: default_style.css
-secondary_style: home_page_style.css
+style: style.css
+secondary_style: secondary_style.css
 
 text: about_text
 ---
 
-
+<!-- about page -->
 <section id="about-page">
 
     <div class="container">
@@ -24,6 +25,8 @@ text: about_text
     <div class="container">
         <div class="single-column-column">
 
+            <!-- liquid markup takes text data from a yaml file -->
+
             {% for entry in site.data[page.text] %}
                 <div class="nine-column-width padding-block-small">
                     <h3 class="fs-title-small fw-bold padding-block-small"> {{entry.title }} </h3>
@@ -36,15 +39,21 @@ text: about_text
 
 </section>
 
+<!-- Terms and conditions segment -->
+
 <section id="terms-and-conditions">
 
     <div class="container">
-        <div class="ten-column-width background-gray padding-inline-small">
+        <div class="single-column-column | ten-column-width background-gray padding-inline-small">
+            
             <div class="nine-column-width">
                 <h2 class="fs-title fw-semi-bold text-center padding-block-small"> TERMS AND CONDITIONS</h2>
             </div>
 
             <div>
+
+                <!-- liquid markup iterates over a list of term segments and over a list of clauses in each segment -->
+
                 {% for entry in site.data.terms_and_conditions %}
                     <div class="nine-column-width padding-block-small">
                         <h3 class="fs-column fw-bold padding-block-small"> {{ entry.title }} </h3>
@@ -53,6 +62,7 @@ text: about_text
                         {% endfor %}
                     </div>
                 {% endfor %}
+
             </div>
 
         </div>

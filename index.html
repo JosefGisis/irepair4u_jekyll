@@ -5,181 +5,208 @@ title: Irepair4u Home
 # All pages require a at least a style and secondary style
 
 reset: reset.css
-style: default_style.css
-secondary_style: home_page_style.css
+style: style.css
+secondary_style: secondary_style.css
 
+# yaml file for page text content
 text: home_text
 ---
 
-<!-- main -->
-<main>
 
-    <div class="background-image">
-        <img src="images/irepair4u_icon_red_transparent_300x300.svg" width="300px" height="300px">
-    </div>
-          
+<!-- home page content -->
 
-    <!-- about-simple provides a simple slogan about this business -->
-    <section id="about-simple">
-        <div class="container">
-
-            <div class="single-column-column">
+<div class="background-image">
+    <img src="images/irepair4u_icon_red_transparent_300x300.svg" width="300px" height="300px">
+</div>
         
-                <div class="eight-column-width">
-                    <h1 class="fs-section-title fw-semi-bold text-center">IPHONE, IPAD, AND MORE</h1>
-                </div>
 
-                <div class="nine-column-width">
-                    <p class="fs-column fw-regular text-center">{{ site.data[page.text].banner }}</p>
-                </div>
+<!-- about-simple provides a simple slogan about this business -->
+<section id="about-simple">
+    <div class="container">
 
-                <div>
-                    <a href="/contact.html"><button class="red-button" type="Button">CONTACT US</button></a>
-                    <a class="fw-bold" href="/about.html"><button class="inverse-red-button" type="Button">ABOUT US</button></a>
-                </div>
+        <div class="single-column-column">
+    
+            <div class="eight-column-width">
+                <h1 class="fs-section-title fw-semi-bold text-center">IPHONE, IPAD, AND MORE</h1>
+            </div>
 
-                <div>
-                    <img src="images/imac-940x474.png" width="940" height="474" alt="Image of several Apple devices" title="Image of several Apple devices">
-                </div>
+            <div class="nine-column-width">
+                <p class="fs-column fw-regular text-center">{{ site.data[page.text].banner }}</p>
+            </div>
 
+            <div>
+                <a href="/contact.html"><button class="red-button" type="Button">CONTACT US</button></a>
+                <a class="fw-bold" href="/about.html"><button class="inverse-red-button" type="Button">ABOUT US</button></a>
+            </div>
+
+            <div>
+                <img src="images/imac-940x474.png" width="940" height="474" alt="Image of several Apple devices" title="Image of several Apple devices">
             </div>
 
         </div>
-    </section>
+
+    </div>
+</section>
 
 
-    <!-- about-detailed provides more detailed information about this business -->
-    <section id="about-detailed">
-        <div class="container">
+<!-- about-detailed provides more detailed information about this business -->
+<section id="about-detailed">
+    <div class="container">
 
-            <!-- single-column for section-title -->
-            <div class="single-column-column">
-                <div class="eight-column-width">
-                    <h1 class="fs-section-title fw-semi-bold"> ABOUT US </h1>
-                </div>
+        <!-- single-column for section-title -->
+        <div class="single-column-column">
+            <div class="eight-column-width">
+                <h1 class="fs-section-title fw-semi-bold"> ABOUT US </h1>
             </div>
-
-
-            <!-- Rather than using a grid, this section contains three double column divs-->
-            <div class="double-column">
-                <div class="double-column-text">
-                    <h3 class="fs-title fw-semi-bold six-column-width">OUR STORY</h3>
-                    <p class="fs-card fw-regular six-column-width">{{ site.data[page.text].our_story }}</p>
-                </div>
-                <div class="double-column-image six-column-width">
-                    <img src="images/about-us-3-2-460x307.jpg" width="460" height="307" alt="Image of a phone being repaired surrounded by phone repair tools" title="Image of a phone being repaired surrounded by phone repair tools">
-                </div>
-            </div>
-
-            <div class="double-column">
-                <div class="double-column-image six-column-width">
-                    <img src="images/coverage1-3-2-460x307.jpg" width="460" height="307" alt="image of a smartphone and tablet side-by-side" title="image of a smartphone and tablet side-by-side">
-                </div>
-                <div class="double-column-text">
-                    <h3 class="fs-title fw-semi-bold">COVERAGE</h3>
-                    <p class="fs-card fw-regular six-column-width">{{ site.data[page.text].coverage }}</p>
-                </div>
-            </div>
-
-            <div class="double-column">
-                <div class="double-column-text">
-                    <h3 class="fs-title fw-semi-bold six-column-width">CUSTOMER SERVICE</h3>
-                    <p class="fs-card fw-regular six-column-width">{{ site.data[page.text].customer_service }}</p>
-                </div>
-                <div class="double-column-image">
-                    <img src="images/trust-us1-3-2-460x307.jpg" width="460" height="307" alt="image of repairman fixing a phone" alt="image of repairman fixing a phone">
-                </div>
-            </div>
-
         </div>
-    </section>
 
 
-    <!-- services provides information on the services the business provides -->
-    <section id="services">
-        <div class="services-container">
+        <!-- Rather than using a grid, this section contains three double column divs-->
+        <div class="double-column">
 
-            <div class="single-column-column">
-                <div class="eight-column-width">
-                    <h1 class="fs-section-title fw-semi-bold">SERVICES</h1>
-                </div>
+            <div class="double-column-text">
+                <h3 class="fs-title fw-semi-bold six-column-width">OUR STORY</h3>
+                <p class="fs-card fw-regular six-column-width">{{ site.data[page.text].our_story }}</p>
             </div>
 
-            <!-- Service card grids -->
-            <div class="three-column-grid">
-
-                <div class="grid-card" id="screen-replacement-info">
-                    <div class="grid-card-logo">
-                        <img src="images/smart-phone-gadget-device-phone-svgrepo-com-transparent.svg" alt="Broken phone screen icon" width="150px" height="150px">
-                        <h3 class="fs-title-small fw-semi-bold">SCREEN REPLACEMENT</h3>
-                    </div>
-                    <div class="grid-card-text">
-                        <p class="fs-card fw-regular">{{ site.data[page.text].screen_replacement }}</p>
-                    </div>
-                </div>
-
-                <div class="grid-card" id="water-damage-info">
-                    <div class="grid-card-logo">
-                        <img src="images/water-drop-svgrepo-com.svg" alt="Water droplet with electric bolt in center icon" width="120px" height="120px">
-                        <h3 class="fs-title-small fw-semi-bold">WATER DAMAGE</h3>
-                    </div>
-                    <div class="grid-card-text">
-                        <p class="fs-card fw-regular">{{ site.data[page.text].water_damage }}</p>
-                    </div>
-                </div>
-
-                <div class="grid-card" id="battery-replacement-info">
-                    <div class="grid-card-logo">
-                        <img src="images/battery-svgrepo-com (1).svg" alt="outline of a depleted battery icon" width="140px" height="140px">
-                        <h3 class="fs-title-small fw-semi-bold">BATTERY REPLACEMENT</h3>
-                    </div>
-                    <div class="grid-card-text">
-                        <p class="fs-card fw-regular">{{ site.data[page.text].battery_replacement }}</p>
-                    </div>
-                </div>
-
-                <div class="grid-card" id="data-recovery-info">
-                    <div class="grid-card-logo">
-                        <img src="images/cloud-upload-svgrepo-com (2).svg" alt="Binary representation icon" width="120px" height="120px">
-                        <h3 class="fs-title-small fw-semi-bold">DATA RECOVERY</h3>
-                    </div>
-                    <div class="grid-card-text">
-                        <p class="fs-card fw-regular">{{ site.data[page.text].data_recovery }}</p>
-                    </div>
-                </div>
-
-                <div class="grid-card" id="accessories-info">
-                    <div class="grid-card-logo">
-                        <img src="images/charger-svgrepo-com (1).svg" alt="phone charger icon" width="150px" height="150px">
-                        <h3 class="fs-title-small fw-semi-bold">ACCESSORIES</h3>
-                    </div>
-                    <div class="grid-card-text">
-                        <p class="fs-card fw-regular">{{ site.data[page.text].accessories }}</p>
-                    </div>
-                </div>
-
-                <div class="grid-card" id="speaker-repair-info">
-                    <div class="grid-card-logo">
-                        <img src="images/speaker-2-svgrepo-com.svg" alt="Speaker sound representation icon" width="120px" height="120px">
-                        <h3 class="fs-title-small fw-semi-bold">SPEAKER REPAIR</h3>
-                    </div>
-                    <div class="grid-card-text">
-                        <p class="fs-card fw-regular">{{ site.data[page.text].speaker_repair }}</p>
-                    </div>
-                </div>
+            <div class="double-column-image six-column-width">
+                <img src="images/about-us-3-2-460x307.jpg" width="460" height="307" alt="Image of a phone being repaired surrounded by phone repair tools" title="Image of a phone being repaired surrounded by phone repair tools">
             </div>
-
-            <!-- Message under service grid -->
-            <div class="single-column">
-                <div class="nine-column-width">
-                    <p class="fs-column fw-bold text-center">We offer many more services. For a full listing, check out our <a href="/services.html">services page</a>.</p>
-                </div>
-            </div>
-
+        
         </div>
-    </section>
 
-</main>
+        <div class="double-column">
+
+            <div class="double-column-image six-column-width">
+                <img src="images/coverage1-3-2-460x307.jpg" width="460" height="307" alt="image of a smartphone and tablet side-by-side" title="image of a smartphone and tablet side-by-side">
+            </div>
+            
+            <div class="double-column-text">
+                <h3 class="fs-title fw-semi-bold">COVERAGE</h3>
+                <p class="fs-card fw-regular six-column-width">{{ site.data[page.text].coverage }}</p>
+            </div>
+        
+        </div>
+
+        <div class="double-column">
+
+            <div class="double-column-text">
+                <h3 class="fs-title fw-semi-bold six-column-width">CUSTOMER SERVICE</h3>
+                <p class="fs-card fw-regular six-column-width">{{ site.data[page.text].customer_service }}</p>
+            </div>
+            
+            <div class="double-column-image">
+                <img src="images/trust-us1-3-2-460x307.jpg" width="460" height="307" alt="image of repairman fixing a phone" alt="image of repairman fixing a phone">
+            </div>
+        
+        </div>
+
+    </div>
+</section>
+
+
+<!-- services provides information on the services the business provides -->
+<section id="services">
+    <div class="services-container">
+
+        <div class="single-column-column">
+            <div class="eight-column-width">
+                <h1 class="fs-section-title fw-semi-bold">SERVICES</h1>
+            </div>
+        </div>
+
+        <!-- Service card grids -->
+        <div class="three-column-grid">
+
+            <div class="grid-card" id="screen-replacement-info">
+
+                <div class="grid-card-logo">
+                    <img src="images/smart-phone-gadget-device-phone-svgrepo-com-transparent.svg" alt="Broken phone screen icon" width="150px" height="150px">
+                    <h3 class="fs-title-small fw-semi-bold">SCREEN REPLACEMENT</h3>
+                </div>
+                
+                <div class="grid-card-text">
+                    <p class="fs-card fw-regular">{{ site.data[page.text].screen_replacement }}</p>
+                </div>
+            
+            </div>
+
+            <div class="grid-card" id="water-damage-info">
+            
+                <div class="grid-card-logo">
+                    <img src="images/water-drop-svgrepo-com.svg" alt="Water droplet with electric bolt in center icon" width="120px" height="120px">
+                    <h3 class="fs-title-small fw-semi-bold">WATER DAMAGE</h3>
+                </div>
+            
+                <div class="grid-card-text">
+                    <p class="fs-card fw-regular">{{ site.data[page.text].water_damage }}</p>
+                </div>
+            
+            </div>
+
+            <div class="grid-card" id="battery-replacement-info">
+            
+                <div class="grid-card-logo">
+                    <img src="images/battery-svgrepo-com (1).svg" alt="outline of a depleted battery icon" width="140px" height="140px">
+                    <h3 class="fs-title-small fw-semi-bold">BATTERY REPLACEMENT</h3>
+                </div>
+            
+                <div class="grid-card-text">
+                    <p class="fs-card fw-regular">{{ site.data[page.text].battery_replacement }}</p>
+                </div>
+            
+            </div>
+
+            <div class="grid-card" id="data-recovery-info">
+            
+                <div class="grid-card-logo">
+                    <img src="images/cloud-upload-svgrepo-com (2).svg" alt="Binary representation icon" width="120px" height="120px">
+                    <h3 class="fs-title-small fw-semi-bold">DATA RECOVERY</h3>
+                </div>
+            
+                <div class="grid-card-text">
+                    <p class="fs-card fw-regular">{{ site.data[page.text].data_recovery }}</p>
+                </div>
+            
+            </div>
+
+            <div class="grid-card" id="accessories-info">
+            
+                <div class="grid-card-logo">
+                    <img src="images/charger-svgrepo-com (1).svg" alt="phone charger icon" width="150px" height="150px">
+                    <h3 class="fs-title-small fw-semi-bold">ACCESSORIES</h3>
+                </div>
+            
+                <div class="grid-card-text">
+                    <p class="fs-card fw-regular">{{ site.data[page.text].accessories }}</p>
+                </div>
+            
+            </div>
+
+            <div class="grid-card" id="speaker-repair-info">
+            
+                <div class="grid-card-logo">
+                    <img src="images/speaker-2-svgrepo-com.svg" alt="Speaker sound representation icon" width="120px" height="120px">
+                    <h3 class="fs-title-small fw-semi-bold">SPEAKER REPAIR</h3>
+                </div>
+            
+                <div class="grid-card-text">
+                    <p class="fs-card fw-regular">{{ site.data[page.text].speaker_repair }}</p>
+                </div>
+            
+            </div>
+        
+        </div>
+
+        <!-- Message under service grid -->
+        <div class="single-column">
+            <div class="nine-column-width">
+                <p class="fs-column fw-bold text-center">We offer many more services. For a full listing, check out our <a href="/services.html">services page</a>.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 
 <!-- banner custom element -->
@@ -187,12 +214,10 @@ text: home_text
     <div class="container">
 
         <div class="single-column-column">
-
             <div>
                 <h2 class="fs-title fw-semi-bold text-center">Free 90-Day Warranty!</h2>
                 <p class="fs-card fw-regular">{{ site.data[page.text].warranty }}</p>
             </div>
-
         </div>
 
     </div>
