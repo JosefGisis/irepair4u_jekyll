@@ -4,11 +4,55 @@ title: Irepair4u Services
 reset: reset.css
 style: default_style.css
 secondary_style: home_page_style.css
+text: services_text
 ---
 
 
-<section>
+<section id="services-page">
+
     <div class="container">
-        <p>This is the services page.</p>
+        <div class="single-column-column">
+
+            <div class="eight-column-width">
+                <h1 class="fs-section-title fw-semi-bold text-center"> SERVICES </h1>
+            </div>
+
+        </div>
     </div>
+
+    <div class="container">
+        <div class="single-column-column">
+
+            <div class="nine-column-width padding-block-small">
+
+                {% for entry in site.data[page.text] %}
+                    <h3 id="{{ entry.section_id }}" class="fs-title-small fw-bold padding-block-small"> {{entry.section }} </h3>
+                    {% for service in entry.services %}
+                        <p id="{{ service.id }}" class="fs-column fw-bold padding-block-smaller"> ● {{ service.service }}</p>
+                        <p class="fs-column fw-regular">  {{ service.description }} </p>
+                    {% endfor %}
+                {% endfor %}
+
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="single-column-column">
+
+            <div class="twelve-column-width">
+                <div class="nine-column-width padding-block-medium">
+                    <h2 class="fs-title fw-semi-bold text-center">Don't see what you are looking for? No worries! Just reach out to us.</h2>
+                </div>
+
+                <div>
+                    <img src="images/pexels-gabriel-freytez-5184x3456-corrected-reduced.jpg">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
 </section>
