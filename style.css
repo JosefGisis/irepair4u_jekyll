@@ -397,6 +397,10 @@ header .red-button {
     /* positioned at half inline padding to the right */
     right: var(--base-padding);
     background-color: transparent;
+    /* Take away annoying mobile tap effect */
+    outline: none;
+    outline-color: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* .bars make up the three lines of the hamburger icon */

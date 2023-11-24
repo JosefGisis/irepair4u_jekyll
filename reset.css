@@ -41,14 +41,3 @@ a {
     outline-color: transparent; 
     -webkit-tap-highlight-color: transparent;
 }
-
-/*
-@media (hover: none) {
-    a {
-        text-decoration: none;
-        color: initial;
-        outline: none;
-        outline-color: transparent;
-    }
-}
-*/
