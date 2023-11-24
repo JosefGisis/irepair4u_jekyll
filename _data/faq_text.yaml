@@ -1,20 +1,31 @@
 # This is text for the faq page.
 
-# Text for this page is contained using mapping, a collection of key-value pairs. Alter the 
-# the map VALUES (not the keys, as that will affect the text and page layout) to change the text on the page. 
+# READ ME!  CAUTION! 
+
+# Text for this website is contained in yaml. yaml (stands for: yaml ain't markup language) contains data as 
+# key-value pairs, formatted as, key: value (read below for examples). To change the text for the website change
+# the values (not the keys. Altering keys will cause the text not to display at all.) 
+
+# This page allows you to add items to the corresponding webpage by adding key-value pairs that mimic the set 
+# structure. Make sure to precisely mimic the key-value structure when adding items or the website will not work.
+
+# Consistent indentation and spacing is very important in yaml. Inconsistent indentation or spacing will prevent
+# the website from working.
 
 # key-value pairs are constructed using ===> key: value
-# key-values where the values are multi-line strings are cunstruced using ===> key: > multi-line string 
-# mapping is done by combining several key-value pairs as such:
-# map name: 
-#   key1: value1
-#   key2: value2
-#   keyNth: valueNth
-# lists are created by starting of the first key-value with a dash, as such ===> - key: value
 
-# See following yaml for an example.
+# key-values where the values are multi-line strings are cunstruced using ===> key: >
+#                                                                                multi-line string 
 
-# Make sure to copy format when adding items.
+# lists are created by starting of all key-value pairs with a dash, as such ===> - key: value
+#                                                                                - key: value
+#                                                                                - key: value
+
+# Objects that contain multiple key-value pairs have a dash at the first key-value, as such ===> - key: value
+#                                                                                                  key: value
+#                                                                                                  key: value
+
+# See file for an example.
 
 
 - Q: >
@@ -56,7 +67,7 @@
 
 
 - Q: >
-    Q. What happens if Irepair4u cannot save my damaged phone? Do I still need to pay for the attempt?
+    Q. What happens if iRepair4U cannot save my damaged phone? Do I still need to pay for the attempt?
   A: >
     A. Depends. With some repairs, such as screen repairs, battery replacements,speaker repairs, etc., we will not charge
     you if we cannot fix your device. However, when it comes to water damage repairs, it is uncertain if the phone can be

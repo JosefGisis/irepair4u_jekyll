@@ -1,19 +1,37 @@
 # This is text for the about page. 
 
-# Text for this page is contained in key value pairs. Alter the values (not the keys or the 
-# text will not appear on the web page) to change the text on the page. 
+# READ ME!  CAUTION! 
+
+# Text for this website is contained in yaml. yaml (stands for: yaml ain't markup language) contains data as 
+# key-value pairs, formatted as, key: value (read below for examples). To change the text for the website change
+# the values (not the keys. Altering keys will cause the text not to display at all.) 
+
+# This page allows you to add items to the corresponding webpage by adding key-value pairs that mimic the set 
+# structure. Make sure to precisely mimic the key-value structure when adding items or the website will not work.
+
+# Consistent indentation and spacing is very important in yaml. Inconsistent indentation or spacing will prevent
+# the website from working.
 
 # key-value pairs are constructed using ===> key: value
-# key-values where the values are multi-line strings are cunstruced using ===> key: > multi-line string 
-# lists are created by starting of the first key-value with a dash, as such ===> - key: value
 
-# Make sure to copy format when adding items.
+# key-values where the values are multi-line strings are cunstruced using ===> key: >
+#                                                                                multi-line string 
+
+# lists are created by starting of all key-value pairs with a dash, as such ===> - key: value
+#                                                                                - key: value
+#                                                                                - key: value
+
+# Objects that contain multiple key-value pairs have a dash at the first key-value, as such ===> - key: value
+#                                                                                                  key: value
+#                                                                                                  key: value
+
+# See file for an example.
 
 - title: OUR START
   paragraph: >
-    IRepair4u's founder and owner, Mattis Gisis, started fixing phones in 2016 from his apartment in Lakewood, New Jersey. His 
+    iRepair4U's founder and owner, Mattis Gisis, started fixing phones in 2016 from his apartment in Lakewood, New Jersey. His 
     business quickly grew and gained a reputation in Lakewood and neighbouring communities for its quality work and friendly
-    service. Since then, Irepair4u has grown and is now located in Jackson, New Jersey, only five minutes outside of lakewood.
+    service. Since then, iRepair4U has grown and is now located in Jackson, New Jersey, only five minutes outside of lakewood.
 
 - title: WHAT WE DO
   paragraph: >
