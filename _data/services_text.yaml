@@ -63,8 +63,8 @@
 - section: Coverage
   section_id: coverage-tag
   services:
-    - service: Iphones
-      description: We perform all repair services for all Iphone models. We also cover Apple products like Ipods and Ipads.
+    - service: iPhones
+      description: We perform all repair services for all iPhone models. We also cover Apple products like iPods and iPads.
       id: iphone-tag
     - service: Samsung
       description: We cover all Samsung models. 

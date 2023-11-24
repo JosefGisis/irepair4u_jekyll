@@ -52,9 +52,28 @@
 - title: Warranty
   paragraph:
   - clause: >
-      - Repairs are covered by a 90-day warranty against defects in workmanship and materials.
+      - All repairs are covered by a free 90-day warranty against defects in workmanship 
+      and materials.
+  - clause: >
+      - The 90 day warranty starts on the first day the customer receives the repaired device. All Repairs 
+      following the warranty period are subject to full repair fees.
   - clause: > 
       - This warranty does not cover damage resulting from mishandling or unauthorized modifications.
+
+
+- title: Phone Sales
+  paragraph:
+  - clause: >
+      - All sales of phones refurbished by iRepair4u are covered by a free 90-day warranty.
+  - clause: >
+      - The customer is entitled to a full refund or replacement if the refurbished device stops working 
+      within the 90-day warranty period and iRepair4U LLC can not repair it.
+  - clause: >
+      - This warranty does not cover damage resulting from mishandling or unauthorized modifications to the
+      device.
+  - clause: >
+      - iRepair4u LLC reserves the right to subtract refund total to cover damages to salvagable device parts
+      resulting from mishandling or unauthorized modifications to the device.
 
 
 - title: Customer Responsibilities

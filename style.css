@@ -66,6 +66,10 @@ General utility class styles.
     color: var(--gray-accent);
 }
 
+.text-white {
+    color: white;
+}
+
 
 .fs-body {
     font-size: var(--fs-body);

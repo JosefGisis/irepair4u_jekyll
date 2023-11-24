@@ -52,8 +52,8 @@ screen_replacement: >
   line new in no time.
 
 water_damage: >
-  Accidents happen. Bring us your water damaged phone so we can assist you. In the meantime, click here to see what you can
-  do to increase your phone's chance of surviving.
+  Accidents happen. Bring us your water damaged phone so we can assist you. In the meantime, 
+  click <a class="text-white" href="/faq.html">here</a> to see what you can do to increase your phone's chance of surviving.
 
 battery_replacement: >
   If your phone won't charge or your battery is draining too quickly, we offer fast and affordable battery replacements and
@@ -68,9 +68,10 @@ accessories: >
   for most popular smartphone makes and models.
 
 speaker_repair: >
-  Having a hard time hearing other during your calls? Speakers can go weak over time. We can improve the quality of your
+  Having a hard time hearing others during your calls? Speakers can go weak over time. We can improve the quality of your
   microphone and speakers.                           
 
 warranty: >
   All our phone repair services are backed by our free 90-day warranty. We guarantee the quality of our work. If you encounter 
-  issue connected to the repair we conducted, we've got you covered.
+  issue connected to the repair we conducted, we've got you covered. See 
+  <a href="/about.html#terms-and-conditions">terms and conditions</a> for more information on our warranty.
