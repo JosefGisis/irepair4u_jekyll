@@ -139,6 +139,9 @@ General utility class styles.
 
 /* Text sizes shrink to accommodate smaller screens */
 @media screen and (max-width: 600px) {
+    .fs-body {
+        font-size: 0.9rem;
+    }
     .fs-card {
         font-size: 1.0rem;
     }
