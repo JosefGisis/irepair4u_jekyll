@@ -16,6 +16,9 @@ Root variables.
     --lighter-shadow-color: rgb(200, 200, 200, 1);
 
     /* Root font variables */
+    --fw-regular: normal;
+    --fw-semi-bold: normal;
+    --fw-bold: bold;
 
     --fs-body: 1rem;
     --fs-card: 1.1rem;
@@ -449,7 +452,7 @@ Specific element styling.
 
 /* Body and body content style */
 body {
-    font-family: 'custom-font' sans-serif;
+    font-family: 'custom-font', sans-serif;
     font-size: var(--fs-body);
     font-weight: var(--fw-regular);
     color: black;
