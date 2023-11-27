@@ -199,26 +199,8 @@ Home page style.
 /* Grid cards should be shrunk */
 
 /* Text needs special conditions to fit in service cards */
-@media screen and (max-width: 940px) {
-    .grid-card {
-        width: min(var(--three-column-width), 90%);
-    }
-    .grid-card-logo {
-        width: min(var(--three-column-width), 90%);
-    }
-    .grid-card-text {
-        width: min(var(--three-column-width), 90%);
-    }
-}
-
 @media screen and (max-width: 600px) {
     .grid-card {
-        width: min(calc(var(--three-column-width) - 40px), 90%);
-    }
-    .grid-card-logo {
-        width: min(calc(var(--three-column-width) - 40px), 90%);
-    }
-    .grid-card-text {
-        width: min(calc(var(--three-column-width) - 40px), 90%);
+        width: min(var(--three-column-width), 90%);
     }
 }
