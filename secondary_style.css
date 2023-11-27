@@ -6,14 +6,15 @@ Home page style.
 /* Page content style */
 
 #about-simple .red-button {
-    margin: 1rem .625rem;
+    margin: 1.5rem .625rem;
 }
 
 #about-simple .inverse-red-button {
-    margin: 1rem .625rem;
+    margin: 1.5rem .625rem;
 }
 
 #about-simple img {
+    /* width 100% keeps the image's ratio */
     width: 100%;
     height: auto;
     margin-top: 50px; 
@@ -30,17 +31,21 @@ Home page style.
 }
 
 #about-detailed .container {
+    /* Not necessary unless child elements get fixed dimensions */
     height: auto;
 }
 
 #about-detailed .flex-row {
     margin-block: 2em;
+    /* Not necessary unless child elements get fixed dimensions */
     height: auto;
 }
 
 .double-column-text {
+    /* DO NOT THINK I NEED
     height: auto;
     max-width: 100%; 
+    */
 }
 
 .double-column-text h3 {
@@ -58,6 +63,7 @@ Home page style.
 }
 
 .double-column-image img{
+    /* Keeps image retio constant */
     max-width: 100%;
     height: auto; 
 }
@@ -83,11 +89,14 @@ Home page style.
     margin-block: 1em;
     background-color: var(--red-accent);
     width: min(calc(var(--three-column-width) + 40px), 90%);
-    border: 0;
-    border-style: solid;
-    border-color: white;
     overflow: hidden;
-    transition: all 1s;
+
+    transition: all 1000ms;
+    -webkit-transition: all 1000ms;
+    -moz-transition: all 1000ms;
+    -ms-transition: all 1000ms;
+    -o-transition: all 1000ms;
+
     box-shadow: 4px 8px 4px 0 var(--shadow-color);
 }
 
@@ -130,7 +139,12 @@ Home page style.
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
-    transition: all 1s;
+    
+    transition: all 1000ms;
+    -webkit-transition: all 1000ms;
+    -moz-transition: all 1000ms;
+    -ms-transition: all 1000ms;
+    -o-transition: all 1000ms;
 }
 
 .grid-card-logo img {
@@ -148,7 +162,13 @@ Home page style.
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
-    transition: all 1s;
+    
+    transition: all 1000ms;
+    -webkit-transition: all 1000ms;
+    -moz-transition: all 1000ms;
+    -ms-transition: all 1000ms;
+    -o-transition: all 1000ms;
+    
 }
 
 .grid-card:hover {
@@ -157,15 +177,25 @@ Home page style.
 
 .grid-card:hover .grid-card-logo {
     opacity: 0;
+
     transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
 }
 
 .grid-card:hover .grid-card-text {
     background-color: rgba(0, 0, 0, 0.3);
     opacity: 1; 
+
     transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
 }
 
+
+/* Not used currently*/
 
 /* Text needs special conditions to fit in service cards
 @media screen and (max-width: 600px) {
