@@ -172,8 +172,12 @@ General utility class styles.
     font-weight: var(--fw-bold);
 }
 
+.text-center {
+    text-align: center;
+}
 
-/* Column width general styling */
+
+/* Column width general styling. Margin uses right/left top/bottom rather than inline and block for broader compatibility */
 .two-column-width {
     max-width: var(--two-column-width);
 }
@@ -192,60 +196,69 @@ General utility class styles.
 
 .eight-column-width {
     max-width: var(--eight-column-width);
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .nine-column-width {
     max-width: var(--nine-column-width);
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ten-column-width {
     max-width: var(--ten-column-width);
-    margin-inline: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .twelve-column-width {
     max-width: var(--twelve-column-width);
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .full-width {
     max-width: var(--full-width);
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-.text-center {
-    text-align: center;
-}
-
-
+ 
+/* Padding utility classes. Padding uses right/left top/bottom rather than inline and block for broader compatibility */
 .padding-block-smaller {
-    padding-block: 0.3rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
 }
 
 .padding-block-small {
-    padding-block: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .padding-block-medium {
-    padding-block: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .padding-block-large {
-    padding-block: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .padding-inline-small {
-    padding-inline: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
 }
 
 .padding-inline-medium {
-    padding-inline: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .padding-inline-large {
-    padding-inline: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 
@@ -255,15 +268,16 @@ main {
 }
 
 section {
-    padding-block: 2rem; 
+    padding-top: 2rem;
+    padding-bottom: 2rem; 
 }
 
 
 /* .container keeps all sections within 960 pixels and centered */
 .container {
     width: min(var(--twelve-column-width), 100% - var(--inline-base-padding));
-    margin-inline: auto;
-    padding-block: 1rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* .services-container is a grid so styling is slightly different */
