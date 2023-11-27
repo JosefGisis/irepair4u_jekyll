@@ -557,7 +557,8 @@ Footer and footer navigation styles.
 }
 
 .primary-footer ul {
-    margin-block: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 0;
 }
 
@@ -566,7 +567,7 @@ Footer and footer navigation styles.
     margin-bottom: 20px;
 }
 
-.primary-footer li div {
+.primary-footer-logo {
     width: var(--three-column-width);
     display: flex;
     align-items: center;
@@ -614,7 +615,7 @@ Footer and footer navigation styles.
 }
 
 .primary-footer table td {
-    padding-right: 2em;
+    padding-right: 2rem;
 }
 
 .primary-footer a:hover,
@@ -626,14 +627,15 @@ Footer and footer navigation styles.
     padding: 20px;
 }
 
-@media screen and (max-width: 650px) {
-    .information-links {
+@media screen and (max-width: 850px) {
+    .information-links li {
         text-align: center;
     }
-    .information-links h4 {
+    .information-links {
         margin-top: 50px;
     }
-    .primary-footer li div {
+    
+    .primary-footer-logo {
         width: 100%;
         height: auto;
         display: flex;
@@ -641,7 +643,7 @@ Footer and footer navigation styles.
         align-content: center;
         justify-content: center;
     }
-    .primary-footer li div img {
+    .primary-footer-logo img {
         margin: 10px;
     }
     #copyright {
@@ -663,10 +665,7 @@ Banner styling.
     border-bottom-color: var(--shadow-color);
 }
 
-.banner h1,
-.banner h2, 
-.banner h3, 
-.banner h4 {
+.banner .fs-title {
     text-align: center;
     padding-bottom: 1em;
 }
@@ -680,7 +679,13 @@ Background icon styling.
 
 .background-image img{
     position: absolute;
+    
     transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+
     top: 0px;
     left: 55%;
     z-index: -1;
