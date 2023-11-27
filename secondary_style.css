@@ -24,10 +24,12 @@ Home page style.
 
 /* about-detailed content and section styling */
 #about-detailed {
-    background: linear-gradient(to bottom right, var(--gray-background), var(--gray-accent));
+    background: linear-gradient(to bottom right, white, var(--gray-accent));
+    /* NOT WORKING. MAY BE VAR
     background: -webkit-linear-gradient(to bottom right, var(--gray-background), var(--gray-accent));
     background: -moz-linear-gradient(to bottom right, var(--gray-background), var(--gray-accent));
     background: -o-linear-gradient(to bottom right, var(--gray-background), var(--gray-accent));
+    */
 }
 
 #about-detailed .container {
@@ -42,10 +44,8 @@ Home page style.
 }
 
 .double-column-text {
-    /* DO NOT THINK I NEED
     height: auto;
     max-width: 100%; 
-    */
 }
 
 .double-column-text h3 {
@@ -86,7 +86,8 @@ Home page style.
 .grid-card {
     background-size: cover;
     color: white;
-    margin-block: 1em;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     background-color: var(--red-accent);
     width: min(calc(var(--three-column-width) + 40px), 90%);
     overflow: hidden;
