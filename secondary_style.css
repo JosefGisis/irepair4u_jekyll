@@ -36,7 +36,7 @@ Home page style.
     height: auto;
 }
 
-#about-detailed .double-column {
+#about-detailed .flex-row {
     margin-block: 2em;
     height: auto;
 }
@@ -63,7 +63,7 @@ Home page style.
 }
 
 @media screen and (max-width: 960px) {
-    #about-detailed .double-column {
+    #about-detailed .flex-row {
         flex-direction: column;
     }
     .double-column-text {

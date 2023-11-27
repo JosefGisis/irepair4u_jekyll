@@ -282,26 +282,18 @@ section {
     padding-bottom: 1rem;
 }
 
-/* .single-column-row (really a flex container with a row flex direction) */
-.single-column-row {
+/* .flex-row utility class */
+.flex-row {
     display: flex;
-    flex-direction: row;
     align-items: center;
     align-content: center;
     justify-content: space-between;
 }
 
-/* .single-column-column (really a flex container with a column flex direction) */
-.single-column-column {
+/* .flex-column utility class */
+.flex-column {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-}
-
-.double-column {
-    display: flex;
     align-items: center;
     align-content: center;
     justify-content: space-between;
@@ -318,23 +310,24 @@ section {
     grid-template-rows: auto auto; 
     justify-content: center;
     justify-items: center;
-    padding-block: 2em;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 /* .four-column is for footer links */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 850px) {
     .four-column {
         flex-direction: column;
     } 
 }
 
 /* .three-column-grid shrings sooner because of the size of the grid */
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 940px) {
     .three-column-grid {
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: auto auto;
     }
-}
+} 
 
 
 /* Button utililty class styling */
@@ -344,17 +337,31 @@ section {
     cursor: pointer;
     text-decoration: none;
     border: 2px solid var(--red-accent);
-    padding: 10px;
-    border-radius: 10px;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+
     transition: all 100ms;
+    -webkit-transition: all 100ms;
+    -moz-transition: all 100ms;
+    -ms-transition: all 100ms; 
+    -o-transition: all 100ms;
+
     box-shadow: 4px 8px 4px 0px var(--lighter-shadow-color);
+    -webkit-box-shadow: 4px 8px 4px 0px var(--lighter-shadow-color);
 }
 
 .red-button:hover,
 .red-button:active {
     background-color: var(--lighter-red-accent);
+
     transform: translateY(1px);
+    -webkit-transform: translateY(1px);
+    -moz-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    -o-transform: translateY(1px);
+
     box-shadow: 2px 4px 4px 0px var(--shadow-color);
+    -webkit-box-shadow: 2px 4px 4px 0px var(--shadow-color);
 }
 
 .inverse-red-button {
@@ -365,8 +372,15 @@ section {
     border: 2px solid var(--red-accent);
     padding: 10px;
     border-radius: 10px;
+
     transition: all 100ms;
+    -webkit-transition: all 100ms;
+    -moz-transition: all 100ms;
+    -ms-transition: all 100ms; 
+    -o-transition: all 100ms;
+
     box-shadow: 4px 8px 4px 0px var(--lighter-shadow-color);
+    -webkit-box-shadow: 4px 8px 4px 0px var(--lighter-shadow-color);
 }
 
 .inverse-red-button:hover,
@@ -374,16 +388,23 @@ section {
     color: var(--lighter-red-accent);
     border-color: var(--lighter-red-accent);
     text-decoration: underline;
+
     transform: translateY(1px);
+    -webkit-transform: translateY(1px);
+    -moz-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    -o-transform: translateY(1px);
+    
     box-shadow: 2px 4px 4px 0px var(--shadow-color);
+    -webkit-box-shadow: 2px 4px 4px 0px var(--shadow-color);
 }
 
 @media screen and (max-width: 650px) {
     .red-button {
-        padding: 8px;
+        padding: 0.5rem;
     }
     .inverse-red-button {
-        padding: 8px;
+        padding: 0.5rem;
     }
 }
 
@@ -396,11 +417,11 @@ Specific element styling.
 body {
     font-family: sans-serif;
     font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
     color: black;
     background-color: white;
     overflow-wrap: break-word;
 }   
-
 
 
 /*********************************************************************************************
@@ -411,6 +432,7 @@ Header and navbar styling.
 header {
     /* box-shadow takes horizonatal and vertical offset then blur distance and then shadow distance */
     box-shadow: 0px 0px 20px 5px var(--shadow-color);
+    -webkit-box-shadow: 0px 0px 20px 5px var(--shadow-color);
 }
 
 .navbar-list li {
@@ -420,14 +442,14 @@ header {
 
 header .red-button {
     /* This creates a gap between the last regular button and the default button */ 
-    margin-left: 15px;
+    margin-left: 0.8rem;
 }
 
 .nav-link a{
     color: black;
     text-decoration: none;
     /* ensures min-width to homogenize appearance */
-    min-width: 60px;
+    min-width: 3.75rem;
     padding: 0.8rem;
 }
 
@@ -447,6 +469,7 @@ header .red-button {
     /* positioned at half inline padding to the right */
     right: var(--base-padding);
     background-color: transparent;
+
     /* Take away annoying mobile tap effect */
     outline: none;
     outline-color: none;
@@ -458,7 +481,12 @@ header .red-button {
     background-color:  var(--red-accent);
     height: 5px;
     margin: 4px 0;
+
     transition: all 150ms;
+    -webkit-transition: all 150ms;
+    -moz-transition: all 150ms;
+    -ms-transition: all 150ms;
+    -o-transition: all 150ms;
 }
 
 .hamburger-icon:hover .bar,
@@ -487,7 +515,7 @@ header .red-button {
 .hamburger-navigation a {
     background-color: var(--gray-accent);
     display: block;
-    padding: 1em;
+    padding: 1rem;
     width: 100%;
     color: black;
     text-decoration: none;
@@ -501,8 +529,8 @@ header .red-button {
 
 /* Switches to mobile nav design (see javascript) */
 @media screen and (max-width: 940px) {
-    .logo img {
-        /* Shrings the logo for smaller screens */
+    .logo {
+        /* Shrinks the logo and link for smaller screens */
         width: min(387px, 80%);
         height: auto;
     }
