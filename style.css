@@ -5,16 +5,17 @@ Root variables.
 *********************************************************************************************/
 
 :root {
-    --red-accent: rgb(225, 30, 70);
+    /* Root color variables */
+    --red-accent: rgba(225, 30, 70, 1);
     --lighter-red-accent: rgba(225, 30, 70, 0.8);
-    --gray-accent: rgb(210, 210, 210);
+    --gray-accent: rgba(210, 210, 210, 1);
 
     --gray-background: rgba(190, 190, 190, 0.3);
     --red-background: rgba(225, 30, 70, 0.4);
-    --background-color: rgb(245, 245, 245);
-    --shadow-color: rgb(160, 160, 160);
-    --lighter-shadow-color: rgb(200, 200, 200);
+    --shadow-color: rgba(160, 160, 160, 1);
+    --lighter-shadow-color: rgb(200, 200, 200, 1);
 
+    /* Root font variables */
     --fw-regular: 400;
     --fw-semi-bold: 500;
     --fw-bold: 700;
@@ -25,20 +26,58 @@ Root variables.
     --fs-title-small: 1.5rem; 
     --fs-title: 2rem;
     --fs-section-title: 3rem;
-     
-    --two-column-width: 140px;
-    --three-column-width: 220px;
-    --four-column-width: 300px;
-    --five-column-width: 380px;
-    --six-column-width: 460px;
-    --eight-column-width: 620px;
-    --nine-column-width: 700px;
-    --ten-column-width: 780px;
-    --twelve-column-width: 940px;
-    --full-width: 960px;
 
-    --base-padding: 1em;
-    --inline-base-padding: 2em;
+    /* Root content size variables */ 
+    /* percentage equivalents are slightly larger than pixel and rem quantities */
+    --two-column-width: 8.75rem;
+    /* pixel equivalent 140px */
+    /* rem equivalent 8.75rem */
+    /* percentage equivalent 7.7% */
+    --three-column-width: 13.75rem;
+    /* pixel equivalent 220px */
+    /* rem equivalent 13.75rem */
+    /* percentage equivalent 12.1% */
+    --four-column-width: 18.75rem;
+    /* pixel equivalent 300px */
+    /* rem equivalent 18.75rem*/
+    /* percentage equivalent 16.5% */
+    --five-column-width: 23.75rem;
+    /* pixel equivalent 380px */
+    /* rem equivalent 23.75rem */
+    /* percentage equivalent 20.9% */
+    --six-column-width: 28.75rem;
+    /* pixel equivalent 460px */
+    /* rem equivalent 28.75rem */
+    /* percentage equivalent 25.3% */
+    --eight-column-width: 38.75rem;
+    /* pixel equivalent 620px */
+    /* rem equivalent 38.75rem */
+    /* percentage equivalent 34.1% */
+    --nine-column-width: 43.75rem;
+    /* pixel equivalent 700px */
+    /* rem equivalent 43.75rem */
+    /* percentage equivalent 38.5% */
+    --ten-column-width: 48.75rem;
+    /* pixel equivalent 780px */
+    /* rem equivalent 48.75rem */
+    /* percentage equivalent 42.9% */
+    --twelve-column-width: 58.75rem;
+    /* pixel equivalent 940px */
+    /* rem equivalent 58.75rem */
+    /* percentage equivalent 51.7% */
+    --full-width: 60rem;
+    /* pixel equivalent 960px */
+    /* rem equivalent 60rem */
+    /* percentage equivalent 52.8% */
+
+    --base-padding: 0.625rem;
+    /* pixel equivalent 10px */
+    /* rem equivalent 0.625rem */
+    /* percentage equivalent 0.55% */
+    --inline-base-padding: 1.25rem;
+    /* pixel equivalent 20px */
+    /* rem equivalent 1.25rem */
+    /* percentage equivalent 1.1% */
 }
 
 
