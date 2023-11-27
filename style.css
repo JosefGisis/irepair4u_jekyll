@@ -277,14 +277,9 @@ section {
 .container {
     width: min(var(--twelve-column-width), 100% - var(--inline-base-padding));
     margin-left: auto;
-    margin-right: auto;
-}
-
-/* .services-container is a grid so styling is slightly different */
-.services-container {
-    width: min(var(--full-width), 100% - var(--inline-base-padding));
-    margin-inline: auto;
-    padding-block: 1rem;
+    margin-right: auto; 
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 /* .single-column-row (really a flex container with a row flex direction) */
