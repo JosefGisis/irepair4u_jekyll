@@ -306,7 +306,8 @@ section {
 
 .three-column-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto; 
     justify-content: center;
     justify-items: center;
     padding-top: 2rem;
@@ -320,7 +321,7 @@ section {
     } 
 }
 
-/* .three-column-grid shrings sooner because of the size of the grid 
+/* .three-column-grid shrings sooner because of the size of the grid */ 
 @media screen and (max-width: 940px) {
     .three-column-grid {
         grid-template-rows: 1fr 1fr 1fr;
@@ -328,12 +329,12 @@ section {
     }
 } 
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 600px) {
     .three-column-grid {
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: auto;
     }
-}*/
+}
 
 
 /* Button utililty class styling */
