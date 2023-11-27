@@ -4,19 +4,13 @@ Home page style.
 *********************************************************************************************/
 
 /* Page content style */
-#about-simple h1, 
-#about-simple h2, 
-#about-simple h3,
-#about-simple h4 {
-    margin-block: 30px;
-}
 
 #about-simple .red-button {
-    margin: 20px 10px;
+    margin: 1rem .625rem;
 }
 
 #about-simple .inverse-red-button {
-    margin: 20px 10px;
+    margin: 1rem .625rem;
 }
 
 #about-simple img {
@@ -30,20 +24,19 @@ Home page style.
 /* about-detailed content and section styling */
 #about-detailed {
     background: linear-gradient(to bottom right, var(--gray-background), var(--gray-accent));
+    background: -webkit-linear-gradient(to bottom right, var(--gray-background), var(--gray-accent));
+    background: -moz-linear-gradient(to bottom right, var(--gray-background), var(--gray-accent));
+    background: -o-linear-gradient(to bottom right, var(--gray-background), var(--gray-accent));
 }
 
 #about-detailed .container {
-    height: auto;
 }
 
 #about-detailed .flex-row {
     margin-block: 2em;
-    height: auto;
 }
 
 .double-column-text {
-    height: auto;
-    max-width: 100%; 
 }
 
 .double-column-text h3 {
@@ -58,8 +51,6 @@ Home page style.
 }
 
 .double-column-image img{
-    max-width: 100%;
-    height: auto; 
 }
 
 @media screen and (max-width: 960px) {
