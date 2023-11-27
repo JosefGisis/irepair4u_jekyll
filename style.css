@@ -16,9 +16,6 @@ Root variables.
     --lighter-shadow-color: rgb(200, 200, 200, 1);
 
     /* Root font variables */
-    --fw-regular: 400;
-    --fw-semi-bold: 500;
-    --fw-bold: 700;
 
     --fs-body: 1rem;
     --fs-card: 1.1rem;
@@ -81,6 +78,36 @@ Root variables.
 }
 
 
+@font-face {
+    font-family: 'custom-font';
+    src: url('custom_font/Atkinson-Hyperlegible-Regular-102.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'custom-font';
+    src: url('custom_font/Atkinson-Hyperlegible-Bold-102.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'custom-font';
+    src: url('custom_font/Atkinson-Hyperlegible-Italic-102.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'custom-font';
+    src: url('custom_font/Atkinson-Hyperlegible-BoldItalic-102.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
 /*********************************************************************************************
 General utility class styles.
 *********************************************************************************************/
@@ -161,15 +188,15 @@ General utility class styles.
 }
 
 .fw-regular {
-    font-weight: var(--fw-regular);
+    font-weight: normal;
 }
 
 .fw-semi-bold {
-    font-weight: var(--fw-semi-bold);
+    font-weight: normal;
 }
 
 .fw-bold {
-    font-weight: var(--fw-bold);
+    font-weight: bold;
 }
 
 .text-center {
@@ -422,7 +449,7 @@ Specific element styling.
 
 /* Body and body content style */
 body {
-    font-family: sans-serif;
+    font-family: 'custom-font' sans-serif;
     font-size: var(--fs-body);
     font-weight: var(--fw-regular);
     color: black;
