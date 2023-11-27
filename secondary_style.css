@@ -196,25 +196,29 @@ Home page style.
 }
 
 
-/* Not used currently*/
+/* Grid cards should be shrunk */
 
-/* Text needs special conditions to fit in service cards
+/* Text needs special conditions to fit in service cards */
+@media screen and (max-width: 940px) {
+    .grid-card {
+        width: min(var(--three-column-width), 90%);
+    }
+    .grid-card-logo {
+        width: min(var(--three-column-width), 90%);
+    }
+    .grid-card-text {
+        width: min(var(--three-column-width), 90%);
+    }
+}
+
 @media screen and (max-width: 600px) {
-    .grid-card-logo h3 {
-        font-size: var(--fs-column);
+    .grid-card {
+        width: min(calc(var(--three-column-width) - 40px), 90%);
     }
-    .grid-card-text p {
-        font-size: 0.9rem;
+    .grid-card-logo {
+        width: min(calc(var(--three-column-width) - 40px), 90%);
     }
-}
-
-@media screen and (max-width: 400px) {
-    .grid-card-logo h3 {
-        font-size: var(--fs-body);
-    }
-    .grid-card-text p {
-        font-size: 0.7rem;
-        font-weight: var(--fw-regular);
+    .grid-card-text {
+        width: min(calc(var(--three-column-width) - 40px), 90%);
     }
 }
-/*
