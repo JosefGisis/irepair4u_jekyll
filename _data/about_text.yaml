@@ -28,19 +28,36 @@
 # See file for an example.
 
 - title: OUR START
-  paragraph: >
-    iRepair4U's founder and owner, Mattis Gisis, started fixing phones in 2016 from his apartment in Lakewood, New Jersey. His 
-    business quickly grew and gained a reputation in Lakewood and neighbouring communities for its quality work and friendly
-    service. Since then, iRepair4U has grown and is now located in Jackson, New Jersey, only five minutes outside of lakewood.
+  text:
+  - paragraph: >
+      Established in 2014 by Mark (Mattis) Gisis from his apartment in Lakewood, New Jersey, iRepair4u started off with his first phone repair,
+      an iPhone 4 he purchased from a friend for $80. Since then, he has fixed thousands of devices and made many satisied customers. 
+      Mark's honesty, friendly demeanor and quality work gained a reputation, laying the foundation of what is the current iRepair4u.
+  - paragraph: >
+      We have expanded our business to meet the needs of our growing community, and our repair shop is now located in Jackson, New Jersey, 
+      just five minutes out of Lakwood.
 
 - title: WHAT WE DO
-  paragraph: >
-    We fix smartphones, tablets, and more! Our specialty is Iphones, but we service all popular makes and models, such as Samsung,
-    LG, Google, OnePlus, and Motorala. We offer a broad range of repair services, from screen repair, to battery replacements, to
-    data recovery. For a full listing of our services and device coverage check out our services page.
+  text: 
+  - paragraph: >
+      We offer a comprehensive range of services tailored to meet the needs of our valued customers. We specialize in iPhone and Samsung
+      repairs, but we also service all popular smartphone makes and models, such Motorola, LG, Google, and OnePlus. We also provide data
+      recovery, entry-level logic board diagnostics, and soldering services.
+  - paragraph: >
+      Recognizing the unique preferences of the Lakewood community, we are pleased to provide dedicated services for flip phones and other dumb phones.
+  - paragraph: >
+      We deliver solutions with precision and efficiency, ensuring your devices receive the care and attention they deserve. For a full 
+      listing of our services and device coverage, check out our services page. 
 
 - title: QUALITY AND AFFORDABILITY 
-  paragraph: >
-    Since our start, we have set customer service, affordability, and quality work as the cornerstone of our business. We pride 
-    ourselves in passing savings on to our customers without compromising on the quality of our work and all while providing a
-    warm and welcoming environment.
+  text:
+  - paragraph: >
+      Since our beginning, we have set customer service, affordability, and quality work as the cornerstone of our business. We pride 
+      ourselves in passing savings on to our customers without compromising on the quality of our work, all while providing a
+      warm and welcoming environment.    
+  - paragraph: >
+      Our commitment to excellence has made us the top referral from local phone carrier stores, businesses, and customers.
+  - paragraph: >
+      We are your one stop shop for all you mobile device needs and accessories. Looking forward to greeting you! 
+    
+      

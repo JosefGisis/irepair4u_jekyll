@@ -36,7 +36,9 @@ text: about_text
             {% for entry in site.data[page.text] %}
                 <div class="nine-column-width padding-block-small">
                     <h3 class="fs-title-small fw-bold padding-block-small"> {{entry.title }} </h3>
-                    <p class="fs-card fw-regular"> {{ entry.paragraph }}</p>
+                    {% for paragraph in entry.text %}
+                        <p class="fs-card fw-regular padding-block-smaller"> {{ paragraph.paragraph }}</p>
+                    {% endfor %}
                 </div>
             {% endfor %}
             

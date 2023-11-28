@@ -111,6 +111,8 @@ Root variables.
     font-weight: bold;
     font-style: italic;
 }
+
+
 /*********************************************************************************************
 General utility class styles.
 *********************************************************************************************/
@@ -363,6 +365,37 @@ section {
     .three-column-grid {
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: auto;
+    }
+}
+
+
+/* float utility classes for image insertion */ 
+.float-right {
+    float: right;
+    position: relative;
+    top: 0.3rem;
+}
+
+.float-left {
+    float: left;
+    position: relative;
+    top: 0.3rem;
+}
+
+@media screen and (max-width: 650px) {
+    .float-right {
+        float: none;
+        max-width: var(--six-column-width);
+        margin-right: auto;
+        margin-left: auto;
+        padding-bottom: 1.5rem;
+    }
+    .float-left {
+        float: none;
+        max-width: var(--six-column-width);
+        margin-right: auto;
+        margin-left: auto;
+        padding-bottom: 1.5rem;
     }
 }
 
