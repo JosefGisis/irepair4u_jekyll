@@ -14,7 +14,7 @@
 
 # key-value pairs are constructed using ===> key: value
 
-# key-values where the values are multi-line strings are cunstruced using ===> key: >
+# key-values where the values are multi-line strings are constructed using ===> key: >
 #                                                                                multi-line string 
 
 # lists are created by starting of all key-value pairs with a dash, as such ===> - key: value
@@ -72,7 +72,7 @@
       - This warranty does not cover damage resulting from mishandling or unauthorized modifications to the
       device.
   - clause: >
-      - iRepair4u LLC reserves the right to subtract refund total to cover damages to salvagable device parts
+      - iRepair4u LLC reserves the right to subtract refund total to cover damages to salvageable device parts
       resulting from mishandling or unauthorized modifications to the device.
 
 

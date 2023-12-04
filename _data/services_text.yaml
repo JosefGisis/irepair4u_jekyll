@@ -14,7 +14,7 @@
 
 # key-value pairs are constructed using ===> key: value
 
-# key-values where the values are multi-line strings are cunstruced using ===> key: >
+# key-values where the values are multi-line strings are constructed using ===> key: >
 #                                                                                multi-line string 
 
 # lists are created by starting of all key-value pairs with a dash, as such ===> - key: value
@@ -76,7 +76,7 @@
       description: Contact us with the make and specifications of your phone, so we can provide more repair information. 
       id: flipphone-tag
     - service: Tablets
-      description: We primarily fix Ipads, other tablets are servid on a case by case basis.
+      description: We primarily fix Ipads, other tablets are served on a case by case basis.
       id: tablet-tag
     - service: Computer
       description: Contact us with the make and specifications of your computer, so we can provide more repair information. 
@@ -87,7 +87,7 @@
   section_id: sales-tag
   services:
     - service: Accessories
-      description: We sell all your phone accessores. We sell screen protectors, cases, phone mounts, chargers, and more.
+      description: We sell all your phone accessories. We sell screen protectors, cases, phone mounts, chargers, and more.
       id: accessories-sales-tag
     - service: Phones
       description: We sell refurbished phone. Availability depends on damaged phones we acquire.

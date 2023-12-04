@@ -14,7 +14,7 @@
 
 # key-value pairs are constructed using ===> key: value
 
-# key-values where the values are multi-line strings are cunstruced using ===> key: >
+# key-values where the values are multi-line strings are constructed using ===> key: >
 #                                                                                multi-line string 
 
 # lists are created by starting of all key-value pairs with a dash, as such ===> - key: value
@@ -31,11 +31,11 @@
   text:
   - paragraph: >
       Established in 2014 by Mark (Mattis) Gisis from his apartment in Lakewood, New Jersey, iRepair4u started off with his first phone repair,
-      an iPhone 4 he purchased from a friend for $80. Since then, he has fixed thousands of devices and made many satisied customers. 
-      Mark's honesty, friendly demeanor and quality work gained a reputation, laying the foundation of what is the current iRepair4u.
+      an iPhone 4 he purchased from a friend for $80. Since then, he has fixed thousands of devices and has made many satisfied customers. 
+      Mark's honesty, friendly demeanor, and quality work gained a reputation, laying the foundation of what is the current iRepair4u.
   - paragraph: >
       We have expanded our business to meet the needs of our growing community, and our repair shop is now located in Jackson, New Jersey, 
-      just five minutes out of Lakwood.
+      just five minutes out of Lakewood.
 
 - title: WHAT WE DO
   text: 
