@@ -1,33 +1,3 @@
-# This is text for the home page. 
-
-# READ ME!  CAUTION! 
-
-# Text for this website is contained in yaml. yaml (stands for: yaml ain't markup language) contains data as 
-# key-value pairs, formatted as, key: value (read below for examples). To change the text for the website change
-# the values (not the keys. Altering keys will cause the text not to display at all.) 
-
-# This webpage has a FIXED structure. That means you can change the value text, but adding key-value pairs will
-# not work and they will not be displayed on the web page. 
-
-# Consistent indentation and spacing is very important in yaml. Inconsistent indentation or spacing will prevent
-# the website from working.
-
-# key-value pairs are constructed using ===> key: value
-
-# key-values where the values are multi-line strings are constructed using ===> key: >
-#                                                                                multi-line string 
-
-# lists are created by starting of all key-value pairs with a dash, as such ===> - key: value
-#                                                                                - key: value
-#                                                                                - key: value
-
-# Objects that contain multiple key-value pairs have a dash at the first key-value, as such ===> - key: value
-#                                                                                                  key: value
-#                                                                                                  key: value
-
-# See file for an example.
-
-
 banner: >
   iRepair4U has been serving Lakewood, Jackson and neighboring communities for over 9 years. We provide fast, professional,
   and courteous services at affordable prices. Give us a call so we may assist you!
@@ -74,4 +44,4 @@ speaker_repair: >
 warranty: >
   All our phone repair services are backed by our free 90-day warranty. We guarantee the quality of our work. If you encounter 
   issue connected to the repair we conducted, we've got you covered. See 
-  <a href="/about.html#terms-and-conditions">terms and conditions</a> for more information on our warranty.
+  <a href="/terms_and_conditions.html">terms and conditions</a> for more information on our warranty.
