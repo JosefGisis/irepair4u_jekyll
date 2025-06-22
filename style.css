@@ -23,11 +23,11 @@ Root variables.
     --fs-body: 1rem;
     --fs-card: 1.1rem;
     --fs-column: 1.2rem;
-    --fs-title-small: 1.5rem; 
+    --fs-title-small: 1.5rem;
     --fs-title: 2rem;
     --fs-section-title: 3rem;
 
-    /* Root content size variables */ 
+    /* Root content size variables */
     /* percentage equivalents are slightly larger than pixel and rem quantities */
     --two-column-width: 8.75rem;
     /* pixel equivalent 140px */
@@ -80,42 +80,37 @@ Root variables.
     /* percentage equivalent 1.1% */
 }
 
-
 @font-face {
-    font-family: 'custom-font';
-    src: url('custom_font/Atkinson-Hyperlegible-Regular-102.otf') format('opentype');
+    font-family: "custom-font";
+    src: url("custom_font/Atkinson-Hyperlegible-Regular-102.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
-
 @font-face {
-    font-family: 'custom-font';
-    src: url('custom_font/Atkinson-Hyperlegible-Bold-102.otf') format('opentype');
+    font-family: "custom-font";
+    src: url("custom_font/Atkinson-Hyperlegible-Bold-102.otf") format("opentype");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
-
 @font-face {
-    font-family: 'custom-font';
-    src: url('custom_font/Atkinson-Hyperlegible-Italic-102.otf') format('opentype');
+    font-family: "custom-font";
+    src: url("custom_font/Atkinson-Hyperlegible-Italic-102.otf") format("opentype");
     font-weight: normal;
     font-style: italic;
     font-display: swap;
 }
 
-
 @font-face {
-    font-family: 'custom-font';
-    src: url('custom_font/Atkinson-Hyperlegible-BoldItalic-102.otf') format('opentype');
+    font-family: "custom-font";
+    src: url("custom_font/Atkinson-Hyperlegible-BoldItalic-102.otf") format("opentype");
     font-weight: bold;
     font-style: italic;
     font-display: swap;
 }
-
 
 /*********************************************************************************************
 General utility class styles.
@@ -145,7 +140,6 @@ General utility class styles.
     color: white;
 }
 
-
 .fs-body {
     font-size: var(--fs-body);
 }
@@ -172,14 +166,13 @@ General utility class styles.
     border-bottom: 2px solid black;
 }
 
-
 /* Text sizes shrink to accommodate smaller screens */
 @media screen and (max-width: 600px) {
     .fs-body {
         font-size: 0.9rem;
     }
     .fs-card {
-        font-size: 1.0rem;
+        font-size: 1rem;
     }
     .fs-column {
         font-size: 1.1rem;
@@ -211,7 +204,6 @@ General utility class styles.
 .text-center {
     text-align: center;
 }
-
 
 /* Column width general styling. Margin uses right/left top/bottom rather than inline and block for broader compatibility */
 .two-column-width {
@@ -260,7 +252,6 @@ General utility class styles.
     margin-right: auto;
 }
 
- 
 /* Padding utility classes. Padding uses right/left top/bottom rather than inline and block for broader compatibility */
 .padding-block-smaller {
     padding-top: 0.3rem;
@@ -297,7 +288,6 @@ General utility class styles.
     padding-right: 3rem;
 }
 
-
 /* General element styling */
 main {
     min-height: 80vmin;
@@ -305,15 +295,14 @@ main {
 
 section {
     padding-top: 2rem;
-    padding-bottom: 2rem; 
+    padding-bottom: 2rem;
 }
-
 
 /* .container keeps all sections within 960 pixels and centered */
 .container {
     width: min(var(--twelve-column-width), 100% - var(--inline-base-padding));
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
@@ -343,7 +332,7 @@ section {
 .three-column-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto; 
+    grid-template-rows: auto auto;
     justify-content: center;
     justify-items: center;
     padding-top: 2rem;
@@ -354,16 +343,16 @@ section {
 @media screen and (max-width: 850px) {
     .four-column {
         flex-direction: column;
-    } 
+    }
 }
 
-/* .three-column-grid shrings sooner because of the size of the grid */ 
+/* .three-column-grid shrinks sooner because of the size of the grid */
 @media screen and (max-width: 940px) {
     .three-column-grid {
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: auto auto;
     }
-} 
+}
 
 @media screen and (max-width: 600px) {
     .three-column-grid {
@@ -372,8 +361,7 @@ section {
     }
 }
 
-
-/* float utility classes for image insertion */ 
+/* float utility classes for image insertion */
 .float-right {
     float: right;
     position: relative;
@@ -403,13 +391,27 @@ section {
     }
 }
 
+.nav-link a {
+    color: black;
+    text-decoration: none;
+    /* ensures min-width to homogenize appearance */
+    min-width: 3.75rem;
+    padding: 0.8rem;
+}
+
+.nav-link a:hover,
+.nav-link a:active {
+    color: var(--red-accent);
+    text-decoration: underline;
+}
 
 /* Button utililty class styling */
-.red-button { 
+.red-button {
+    display: flex;
+    align-items: center;
     color: white;
     background-color: var(--red-accent);
     cursor: pointer;
-    text-decoration: none;
     border: 2px solid var(--red-accent);
     padding: 0.625rem;
     border-radius: 0.625rem;
@@ -417,11 +419,18 @@ section {
     transition: all 100ms;
     -webkit-transition: all 100ms;
     -moz-transition: all 100ms;
-    -ms-transition: all 100ms; 
+    -ms-transition: all 100ms;
     -o-transition: all 100ms;
 
     box-shadow: 4px 8px 4px 0px var(--lighter-shadow-color);
     -webkit-box-shadow: 4px 8px 4px 0px var(--lighter-shadow-color);
+}
+
+.red-button .back-arrow {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 .red-button:hover,
@@ -429,6 +438,19 @@ section {
     background-color: var(--lighter-red-accent);
 
     transform: translateY(1px);
+    .nav-link a {
+        color: black;
+        text-decoration: none;
+        /* ensures min-width to homogenize appearance */
+        min-width: 3.75rem;
+        padding: 0.8rem;
+    }
+    
+    .nav-link a:hover,
+    .nav-link a:active {
+        color: var(--red-accent);
+        text-decoration: underline;
+    }
     -webkit-transform: translateY(1px);
     -moz-transform: translateY(1px);
     -ms-transform: translateY(1px);
@@ -450,7 +472,7 @@ section {
     transition: all 100ms;
     -webkit-transition: all 100ms;
     -moz-transition: all 100ms;
-    -ms-transition: all 100ms; 
+    -ms-transition: all 100ms;
     -o-transition: all 100ms;
 
     box-shadow: 4px 8px 4px 0px var(--lighter-shadow-color);
@@ -468,7 +490,7 @@ section {
     -moz-transform: translateY(1px);
     -ms-transform: translateY(1px);
     -o-transform: translateY(1px);
-    
+
     box-shadow: 2px 4px 4px 0px var(--shadow-color);
     -webkit-box-shadow: 2px 4px 4px 0px var(--shadow-color);
 }
@@ -482,6 +504,43 @@ section {
     }
 }
 
+/*********************************************************************************************
+Logo styling.
+*********************************************************************************************/
+.primary-logo {
+    max-width: var(--nine-column-width);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+.primary-logo .banner-logo {
+    max-width: 75%;
+}
+
+.primary-logo .icon-logo {
+    max-width: 20%;
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+}
+
+@media screen and (max-width: 600px) {
+    .primary-logo {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .primary-logo .banner-logo {
+        order: 2;
+        max-width: 100%;
+    }
+}
 
 /*********************************************************************************************
 Specific element styling.
@@ -489,136 +548,13 @@ Specific element styling.
 
 /* Body and body content style */
 body {
-    font-family: 'custom-font', sans-serif;
+    font-family: "custom-font", sans-serif;
     font-size: var(--fs-body);
     font-weight: var(--fw-regular);
     color: black;
     background-color: white;
     overflow-wrap: break-word;
-}   
-
-
-/*********************************************************************************************
-Header and navbar styling. 
-*********************************************************************************************/
-
-/* Header and header content style */
-header {
-    /* box-shadow takes horizonatal and vertical offset then blur distance and then shadow distance */
-    box-shadow: 0px 0px 20px 5px var(--shadow-color);
-    -webkit-box-shadow: 0px 0px 20px 5px var(--shadow-color);
 }
-
-.navbar-list li {
-    /* inline-block removes list styles and make items horizontal */
-    display: inline-block;
-}
-
-header .red-button {
-    /* This creates a gap between the last regular button and the default button */ 
-    margin-left: 0.8rem;
-}
-
-.nav-link a{
-    color: black;
-    text-decoration: none;
-    /* ensures min-width to homogenize appearance */
-    min-width: 3.75rem;
-    padding: 0.8rem;
-}
-
-.nav-link a:hover,
-.nav-link a:active {
-    color: var(--red-accent);
-    text-decoration: underline;
-}
-
-
-/* This segment control the hamburger menu */
-.hamburger-icon {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    width: min(35px, 10%);
-    /* positioned at half inline padding to the right */
-    right: var(--base-padding);
-    background-color: transparent;
-
-    /* Take away annoying mobile tap effect */
-    outline: none;
-    outline-color: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-/* .bars make up the three lines of the hamburger icon */
-.hamburger-icon .bar {
-    background-color:  var(--red-accent);
-    height: 5px;
-    margin: 4px 0;
-
-    transition: all 150ms;
-    -webkit-transition: all 150ms;
-    -moz-transition: all 150ms;
-    -ms-transition: all 150ms;
-    -o-transition: all 150ms;
-}
-
-.hamburger-icon:hover .bar,
-.hamburger-icon:active .bar {
-    background-color: var(--lighter-red-accent);
-}
-
-
-/* .hamburger-navigation is the ul that actually makes up the list */
-.hamburger-navigation {
-    display: none;
-    position: absolute;
-    width: 100%;
-    border-bottom: 5px solid var(--shadow-color);
-} 
-
-.hamburger-navigation ul {
-    list-style: none;
-    padding: 0;
-}
-
-.hamburger-navigation li {
-    display: block;
-}
-
-.hamburger-navigation a {
-    background-color: var(--gray-accent);
-    display: block;
-    padding: 1rem;
-    width: 100%;
-    color: black;
-    text-decoration: none;
-}
-
-.hamburger-navigation a:hover,
-.hamburger-navigation a:active {
-    color: white;
-    background-color: var(--shadow-color);
-}
-
-/* Switches to mobile nav design (see javascript) */
-@media screen and (max-width: 940px) {
-    .logo {
-        /* Shrinks the logo and link for smaller screens */
-        width: min(387px, 80%);
-        height: auto;
-    }
-    .primary-navigation {
-        display: none;
-    }
-    .hamburger-navigation {
-        display: none;
-    }
-    .hamburger-icon {
-        display: block;
-    }
-}
-
 
 
 /*********************************************************************************************
@@ -626,7 +562,7 @@ Footer and footer navigation styles.
 *********************************************************************************************/
 
 /* footer and footer content style */
-.primary-footer{
+.primary-footer {
     color: white;
 }
 
@@ -660,8 +596,8 @@ Footer and footer navigation styles.
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    background: url('images/contact-mobile-svgrepo-com.svg');
-    background-size: cover; 
+    background: url("images/contact-mobile-svgrepo-com.svg");
+    background-size: cover;
 }
 
 #email::before {
@@ -670,7 +606,7 @@ Footer and footer navigation styles.
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    background: url('images/contact-mail-svgrepo-com.svg');
+    background: url("images/contact-mail-svgrepo-com.svg");
     background-size: cover;
 }
 
@@ -680,15 +616,11 @@ Footer and footer navigation styles.
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    background: url('images/contact-map-pin-svgrepo-com.svg');
+    background: url("images/contact-map-pin-svgrepo-com.svg");
     background-size: cover;
 }
 
-.primary-footer table th {
-    padding-bottom: 20px;
-}
-
-.primary-footer table td {
+.primary-footer table td:first-child {
     padding-right: 2rem;
 }
 
@@ -708,7 +640,11 @@ Footer and footer navigation styles.
     .information-links {
         margin-top: 50px;
     }
-    
+
+    .primary-footer table {
+        margin-inline: auto;
+    }
+
     .primary-footer-logo {
         width: 100%;
         height: auto;
@@ -724,8 +660,6 @@ Footer and footer navigation styles.
         margin-top: 50px;
     }
 }
-
-
 
 /*********************************************************************************************
 Banner styling.
@@ -744,16 +678,13 @@ Banner styling.
     padding-bottom: 1em;
 }
 
-
-
-
 /*********************************************************************************************
 Background icon styling.
 *********************************************************************************************/
 
-.background-image img{
+.background-image img {
     position: absolute;
-    
+
     transform: rotate(-10deg);
     -webkit-transform: rotate(-10deg);
     -moz-transform: rotate(-10deg);

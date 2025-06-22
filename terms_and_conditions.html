@@ -1,0 +1,35 @@
+---
+layout: default
+title: iRepair4u FAQ
+
+reset: reset.css
+style: style.css
+secondary_style: secondary_style.css
+
+show_back_nav: true
+
+text: faq_text
+---
+
+<section id="terms-and-conditions">
+    <div class="container">
+        <div class="flex-column | ten-column-width padding-inline-small">
+            <div class="nine-column-width">
+                <h2 class="fs-title fw-semi-bold text-center padding-block-small">TERMS AND CONDITIONS</h2>
+            </div>
+
+            <div>
+                <!-- liquid markup iterates over a list of term segments and over a list of clauses in each segment -->
+
+                {% for entry in site.data.terms_and_conditions %}
+                <div class="nine-column-width padding-block-small">
+                    <h3 class="fs-column fw-bold padding-block-small">{{ entry.title }}</h3>
+                    {% for clause in entry.paragraph %}
+                    <p class="fs-card fw-regular padding-block-smaller">{{ clause.clause }}</p>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,26 +1,29 @@
-
 /*********************************************************************************************
 Home page style.
 *********************************************************************************************/
 
 /* Page content style */
 
+#about-simple {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
 #about-simple .red-button {
-    margin: 1.5rem .625rem;
+    margin: 1.5rem 0.625rem;
 }
 
 #about-simple .inverse-red-button {
-    margin: 1.5rem .625rem;
+    margin: 1.5rem 0.625rem;
 }
 
-#about-simple img {
+#about-simple .hero-image {
     /* width 100% keeps the image's ratio */
     width: 100%;
     height: auto;
-    margin-top: 50px; 
+    margin-top: 50px;
     margin-bottom: 30px;
 }
-
 
 /* about-detailed content and section styling */
 #about-detailed {
@@ -39,14 +42,14 @@ Home page style.
 
 #about-detailed .flex-row {
     margin-top: 3.5rem;
-    margin-bottom: 3.5rem
+    margin-bottom: 3.5rem;
     /* Not necessary unless child elements get fixed dimensions */
     height: auto;
 }
 
 .double-column-text {
     height: auto;
-    max-width: 100%; 
+    max-width: 100%;
 }
 
 .double-column-text h3 {
@@ -63,10 +66,10 @@ Home page style.
     padding: 1.5em;
 }
 
-.double-column-image img{
+.double-column-image img {
     /* Keeps image retio constant */
     max-width: 100%;
-    height: auto; 
+    height: auto;
 }
 
 @media screen and (max-width: 960px) {
@@ -82,7 +85,6 @@ Home page style.
         order: 2;
     }
 }
-
 
 /* Services section grid and grid card styling */
 .grid-card {
@@ -103,7 +105,6 @@ Home page style.
     box-shadow: 4px 8px 4px 0 var(--shadow-color);
 }
 
-
 #screen-replacement-info {
     background-image: url("images/age-barros-fKAjOxgZNPg-unsplash.jpg");
     background-size: cover;
@@ -116,7 +117,7 @@ Home page style.
 
 #battery-replacement-info {
     background-image: url("images/tyler-lastovich-rAtzDB6hWrU-unsplash.jpg");
-    background-size: cover; 
+    background-size: cover;
 }
 
 #data-recovery-info {
@@ -144,7 +145,7 @@ Home page style.
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
-    
+
     transition: all 1000ms;
     -webkit-transition: all 1000ms;
     -moz-transition: all 1000ms;
@@ -167,13 +168,12 @@ Home page style.
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
-    
+
     transition: all 1000ms;
     -webkit-transition: all 1000ms;
     -moz-transition: all 1000ms;
     -ms-transition: all 1000ms;
     -o-transition: all 1000ms;
-    
 }
 
 .grid-card:hover {
@@ -191,14 +191,13 @@ Home page style.
 
 .grid-card:hover .grid-card-text {
     background-color: rgba(0, 0, 0, 0.3);
-    opacity: 1; 
+    opacity: 1;
 
     transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
     -o-transform: translateY(-100%);
 }
-
 
 /* Grid cards should be shrunk */
 

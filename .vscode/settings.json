@@ -1,3 +1,11 @@
 {
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "[html]": {
+        "editor.defaultFormatter": "sissel.shopify-liquid",
+        "editor.formatOnSave": true
+    },
+    "[log-liquid]": {
+        "editor.defaultFormatter": "sissel.shopify-liquid",
+        "editor.formatOnSave": true
+    }
 }
