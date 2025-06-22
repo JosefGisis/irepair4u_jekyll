@@ -7,7 +7,7 @@ secondary_style: secondary_style.css
 readme_style: readme.css
 ---
 
-### <- [Go Back Home](/)
+### [<- Go Back Home](/)
 
 # iRepair4U Website
 
