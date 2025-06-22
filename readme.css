@@ -3,25 +3,129 @@ main {
     color: white;
     font-family: "Courier New", Courier, monospace;
     padding: 2rem;
+    /* Remove overflow: hidden - this cuts off content */
+    /* overflow: hidden; */
+
+    /* Better text wrapping properties */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+
+    /* Ensure main container doesn't exceed viewport */
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
+/* Fix for code blocks - these are likely causing your overflow issues */
+main code {
+    display: inline-block;
+    max-width: 100%;
+    overflow-x: auto; /* Use auto instead of scroll to hide scrollbar when not needed */
+    white-space: pre-wrap; /* Allow wrapping within code blocks */
+    word-break: break-all; /* More aggressive breaking for code */
+    padding: 0.2rem 0.4rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+/* Fix for code blocks within pre tags */
+main pre {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+main pre code {
+    display: block;
+    padding: 0;
+    background-color: transparent;
+    white-space: pre-wrap;
+    overflow-x: visible;
+}
+
+/* Ensure tables don't overflow */
+main table {
+    max-width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+main td,
+main th {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 0; /* Forces table-layout: fixed to work */
+}
+
+/* Fix for long URLs and links */
+main a {
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+/* Ensure list items wrap properly */
+main li {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Headers */
 main h1 {
     color: #00ff00;
     font-size: 2.5rem;
     margin-block: 1rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
+
 main h2 {
     color: #00ccff;
     font-size: 2rem;
     margin-block: 1rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
+
 main h3 {
     color: #ffcc00;
     font-size: 1.5rem;
     margin-block: 1rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
+
 main p {
     font-size: 1.2rem;
     line-height: 1.5;
     margin-block: 1rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main h2 {
+        font-size: 1.5rem;
+    }
+
+    main h3 {
+        font-size: 1.2rem;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
 }
