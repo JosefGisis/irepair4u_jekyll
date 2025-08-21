@@ -5,6 +5,7 @@ reset: reset.css
 style: style.css
 secondary_style: secondary_style.css
 readme_style: readme.css
+sitemap: false
 ---
 
 ### [<- Go Back Home](/)
