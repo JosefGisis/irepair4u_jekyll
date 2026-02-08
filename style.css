@@ -113,6 +113,33 @@ Root variables.
 }
 
 /*********************************************************************************************
+Accessibility utility styles.
+*********************************************************************************************/
+
+/* Screen reader only utility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Visible focus styles for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--red-accent);
+    outline-offset: 2px;
+}
+
+/*********************************************************************************************
 General utility class styles.
 *********************************************************************************************/
 
@@ -445,7 +472,7 @@ section {
         min-width: 3.75rem;
         padding: 0.8rem;
     }
-    
+
     .nav-link a:hover,
     .nav-link a:active {
         color: var(--red-accent);
@@ -556,7 +583,6 @@ body {
     overflow-wrap: break-word;
 }
 
-
 /*********************************************************************************************
 Footer and footer navigation styles.
 *********************************************************************************************/
@@ -567,6 +593,12 @@ Footer and footer navigation styles.
 }
 
 .primary-footer ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.primary-footer .column {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 0;

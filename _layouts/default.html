@@ -1,6 +1,6 @@
-<!-- Home page (index) for iRepair4U website -->
+<!-- Default layout for iRepair4U website -->
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
     <head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-ND3S2BWNCR"></script>
@@ -14,121 +14,233 @@
         </script>
 
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- SEO: Dynamic title with brand suffix -->
+        <title>{% if page.seo_title %}{{ page.seo_title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+        <!-- SEO: Dynamic meta description from page or site fallback -->
         <meta
             name="description"
-            content="iRepair4U is your one stop shop for phone and tablet repairs in Lakewood, New Jersey and neighbouring communitites."
+            content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
         />
         <meta name="author" content="Josef Gisis" />
-        <meta name="HandheldFriendly" content="True" />
         <meta
             name="keywords"
-            content="Phone Repair, Phone Repair Lakewood, Phone Repair Lakewood New Jersey, Phone Repair New Jersey, iPhone Repair, iPhone Repair Lakewood, iPhone Repair Lakewood New Jersey, iPhone Repair New Jersey, iRepair4u, iRepair4uNJ, iRepair4u Lakewood NJ, iRepair4U Lakewood, smartphone repair, tablet repair, Samsung Repair, Screen Repair, Cracked Screen, Broken Screen, Screen Replacement, Battery Replacement, Data Recovery"
+            content="{% if page.keywords %}{{ page.keywords }}{% else %}Phone Repair Jackson NJ, Phone Repair Lakewood NJ, iPhone Repair New Jersey, Screen Replacement, Battery Replacement, Water Damage Repair, Data Recovery, Tablet Repair, Samsung Repair, iRepair4U{% endif %}"
         />
-        <meta name="robots" content="index" />
+        <meta name="robots" content="index, follow" />
         <meta name="google-site-verification" content="m0iZSQakZ3m493OH04fvTFoz2mPAvIFHrtw-cEhEgps" />
         <meta name="msvalidate.01" content="9F0993A681A48068EB01C42C7EE58079" />
-        <meta http-equiv="X-UA-Compatable" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/images/4u_favicon_32x32.png" size="32x32" type="image/png" />
-        <link rel="icon" href="/images/4u_favicon_64x64.png" size="64x64" type="image/png" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <title>iRepair4u - home</title>
+        <!-- SEO: Canonical URL -->
+        <link rel="canonical" href="{{ page.url | absolute_url }}" />
+
+        <!-- Open Graph meta tags for social sharing -->
+        <meta property="og:title" content="{% if page.seo_title %}{{ page.seo_title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
+        <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+        <meta property="og:url" content="{{ page.url | absolute_url }}" />
+        <meta property="og:site_name" content="iRepair4U" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content="{{ '/images/irepair4u_icon_red_transparent_300x300.svg' | absolute_url }}" />
+
+        <!-- Twitter Card meta tags -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="{% if page.seo_title %}{{ page.seo_title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
+        <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+        <meta name="twitter:image" content="{{ '/images/irepair4u_icon_red_transparent_300x300.svg' | absolute_url }}" />
+
+        <!-- Favicon -->
+        <link rel="icon" href="/images/4u_favicon_32x32.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="/images/4u_favicon_64x64.png" sizes="64x64" type="image/png" />
+
+        <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="{{ page.reset }}" />
         <link rel="stylesheet" type="text/css" href="{{ page.style }}" />
         <link rel="stylesheet" type="text/css" href="{{ page.secondary_style }}" />
-        <link rel="stylesheet" type="text/css" href="{{ page.readme_style }}" />
+        {% if page.readme_style %}<link rel="stylesheet" type="text/css" href="{{ page.readme_style }}" />{% endif %}
+
+        <!-- Structured Data: LocalBusiness Schema -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "iRepair4U",
+            "description": "{{ site.description | strip_newlines | escape }}",
+            "url": "{{ site.url }}",
+            "telephone": "+1-732-330-3038",
+            "email": "iRepairr4u@gmail.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "750 Green Valley Rd.",
+                "addressLocality": "Jackson",
+                "addressRegion": "NJ",
+                "postalCode": "08527",
+                "addressCountry": "US"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 40.0987,
+                "longitude": -74.3298
+            },
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Sunday",
+                    "opens": "11:00",
+                    "closes": "15:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+                    "opens": "11:00",
+                    "closes": "17:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Friday",
+                    "opens": "11:00",
+                    "closes": "14:00"
+                }
+            ],
+            "image": "{{ '/images/irepair4u_icon_red_transparent_300x300.svg' | absolute_url }}",
+            "priceRange": "$$",
+            "serviceArea": {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 40.0987,
+                    "longitude": -74.3298
+                },
+                "geoRadius": "20 mi"
+            },
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Phone & Tablet Repair Services",
+                "itemListElement": [
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Screen Replacement" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Battery Replacement" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Water Damage Repair" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Data Recovery" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Speaker Repair" } }
+                ]
+            }
+        }
+        </script>
+
+        {% if page.schema %}
+        <!-- Page-specific structured data -->
+        <script type="application/ld+json">
+        {{ page.schema }}
+        </script>
+        {% endif %}
     </head>
     <body>
         {% if page.show_back_nav %}
-        <div class="container">
-            <div class="nav-link">
+        <nav aria-label="Back navigation">
+            <div class="container">
+                <div class="nav-link">
                 <a href="/">
                     <button class="red-button">
                         <img src="/images/arrow-back-svgrepo-com.svg" class="back-arrow" />
                         <p>Back</p>
                     </button>
-                </a>
+                    </a>
+                </div>
             </div>
-        </div>
+        </nav>
 
-        <div class="background-image">
-            <img src="images/irepair4u_icon_red_transparent_300x300.svg" width="300px" height="300px" />
+        <div class="background-image" aria-hidden="true">
+            <img src="images/irepair4u_icon_red_transparent_300x300.svg" width="300" height="300" alt="" />
         </div>
         {% endif %}
 
-        <main>{{ content }}</main>
+        <main id="main-content">{{ content }}</main>
 
-        <footer id="footer" class="primary-footer background-red">
+        <footer id="footer" class="primary-footer background-red" role="contentinfo">
             <div class="container">
                 <div class="four-column">
-                    <!-- All navigation link columns are contained within the four column div -->
-
                     <div>
                         <ul id="business-links" aria-label="Business contact information">
                             <li>
                                 <div class="primary-footer-logo">
-                                    <a href="/"
+                                    <a href="/" aria-label="iRepair4U Home"
                                         ><img
                                             src="images/irepair4u_white_transparent_100x860.svg"
-                                            alt="iRepair4U banner"
-                                            width="172px"
-                                            height="20px"
+                                            alt="iRepair4U"
+                                            width="172"
+                                            height="20"
                                     /></a>
-                                    <a href="/"
+                                    <a href="/" aria-label="iRepair4U Home"
                                         ><img
                                             src="images/irepair4u_icon_white_transparent_300x300.svg"
-                                            alt="iRepair4U logo"
-                                            width="40px"
-                                            height="40px"
+                                            alt=""
+                                            width="40"
+                                            height="40"
                                     /></a>
                                 </div>
                             </li>
 
-                            <li id="phone"><a href="tel:+17323303038">(732)-330-3038</a></li>
-                            <li id="email"><a href="mailto:iRepairr4u@gmail.com">iRepairr4U@gmail.com</a></li>
+                            <li id="phone"><a href="tel:+17323303038" aria-label="Call us at (732)-330-3038">(732)-330-3038</a></li>
+                            <li id="email"><a href="mailto:iRepairr4u@gmail.com" aria-label="Email us at iRepairr4U@gmail.com">iRepairr4U@gmail.com</a></li>
                             <li id="address">
-                                <a href="https://maps.app.goo.gl/VZhH7L8QmPkuU2BT9"
+                                <a href="https://maps.app.goo.gl/VZhH7L8QmPkuU2BT9" aria-label="View our location on Google Maps: 750 Green Valley rd., Jackson, NJ 08527" rel="noopener"
                                     >750 Green Valley rd., Jackson, NJ 08527</a
                                 >
                             </li>
                         </ul>
                     </div>
 
-                    <ul class="information-links" aria-label="Business hours">
-                        <li><h4 class="fs-card fw-bold">BUSINESS HOURS</h4></li>
-                        <li><p>Please call before coming</p></li>
-
-                        <table id="hours" aria-label="Business hours listing">
-                            <tr>
-                                <td>Sun</td>
-                                <td>11:00am - 3:00pm</td>
-                            </tr>
-                            <tr>
-                                <td>Mon - Thu</td>
-                                <td>11:00am - 5:00pm</td>
-                            </tr>
-                            <tr>
-                                <td>Friday</td>
-                                <td>11:00am - 2:00pm</td>
-                            </tr>
-                            <tr>
-                                <td>Saturday</td>
-                                <td>closed</td>
-                            </tr>
+                    <div>
+                        <h4 class="fs-card fw-bold">BUSINESS HOURS</h4>
+                        <div class="column">
+                            <p>Please call before coming</p>
+                            
+                            <table id="hours" aria-label="Weekly business hours">
+                                <thead class="sr-only">
+                                    <tr>
+                                        <th scope="col">Day</th>
+                                        <th scope="col">Hours</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Sun</td>
+                                        <td>11:00am - 3:00pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mon - Thu</td>
+                                        <td>11:00am - 5:00pm</td>
+                                    </div>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>11:00am - 2:00pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>Closed</td>
+                                </tr>
+                            </tbody>
                         </table>
-                    </ul>
+                    </div>
+                    </div>
 
-                    <ul class="information-links" aria-label="General information links">
-                        <li><h4 class="fs-card fw-bold">INFORMATION</h4></li>
-                        <li><a href="/terms_and_conditions.html">terms and conditions</a></li>
-                        <li><a href="/faq.html">faq</a></li>
-                        <li><a href="/README.html">site documentation</a></li>
-                    </ul>
+                    <nav aria-label="Footer navigation">
+                        <h4 class="fs-card fw-bold">INFORMATION</h4>
+                        <ul class="information-links">
+                            <li><a href="/terms_and_conditions.html">Terms and Conditions</a></li>
+                            <li><a href="/faq.html">FAQ</a></li>
+                            <li><a href="/README.html">Site Documentation</a></li>
+                        </ul>
+                    </nav>
                 </div>
 
                 <div class="single-column">
                     <div class="eight-column-width">
-                        <p class="text-center" id="copyright">&copy 2025 iRepair4U LLC | designed by Josef Gisis</p>
+                        <p class="text-center" id="copyright">&copy; 2025 iRepair4U LLC | designed by Josef Gisis</p>
                     </div>
                 </div>
             </div>

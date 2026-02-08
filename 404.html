@@ -2,7 +2,7 @@
 permalink: /404.html
 
 layout: none
-title: iRepair4u 404 - page not found
+title: Page Not Found
 
 reset: reset.css
 style: style.css
@@ -12,19 +12,20 @@ text: none
 ---
 
 
-<!-- Irepair4u 404 not found page -->
+<!-- iRepair4U 404 not found page -->
 <!DOCTYPE html>
- <html lang="en-us">
+ <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="iRepair4U is your one stop shop for phone and tablet repairs in Lakewood, New Jersey and neighbouring communitites.">
-        <meta name="author" content="Josef Gisis">
-        <meta http-equiv="X-UA-Compatable" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="/images/4u_favicon_32x32.png" size="32x32" type="image/png">
-        <link rel="icon" href="/images/4u_favicon_64x64.png" size="64x64" type="image/png">
+        <meta name="description" content="Page not found. Return to the iRepair4U homepage for phone and tablet repair services in Jackson, NJ.">
+        <meta name="author" content="Josef Gisis">
+        <meta name="robots" content="noindex, follow">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" href="/images/4u_favicon_32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="/images/4u_favicon_64x64.png" sizes="64x64" type="image/png">
 
-        <title>{{ page.title }}</title>
+        <title>Page Not Found | iRepair4U</title>
         <link rel="stylesheet" type="text/css" href="{{ page.reset }}">
         <link rel="stylesheet" type="text/css" href="{{ page.style }}">
         <style type="text/css">
@@ -38,13 +39,13 @@ text: none
             color: var(--shadow-color);
             margin-bottom: 1rem;
            }
-           h3 {
+           p {
             font-size: 1.3rem;
             color: black;
             margin-bottom: 1rem;
            }
 
-           /* Adjusts font size for itty bitty screen */
+           /* Adjusts font size for small screens */
            @media screen and (max-width: 600px) {
             h1 {
               font-size: 2.5rem;
@@ -52,7 +53,7 @@ text: none
             h2 {
               font-size: 1.8rem;
             }
-            h3 {
+            p {
               font-size: 0.9rem;
             }
            }
@@ -64,16 +65,16 @@ text: none
 
       <main>
         
-        <section class="404-not-found">
+        <section aria-label="Page not found">
 
           <div class="container">
             <div class="singe-column-column">
 
               <div class="eight-column-width">
-                <h1 class="text-center">404 :/</h1>
+                <h1 class="text-center" aria-hidden="true">404 :/</h1>
                 <h2 class="text-center">Page Not Found</h2>
-                <h3 class="text-center">Click <a href="/">here</a> to be redirected to our home page.</h3>
-                <img src="/images/kostiantyn-li-Fi_nhg5itCw-unsplash.jpg">
+                <p class="text-center">The page you are looking for does not exist. <a href="/">Return to our home page</a>.</p>
+                <img src="/images/kostiantyn-li-Fi_nhg5itCw-unsplash.jpg" alt="Decorative image" loading="lazy" width="620" height="auto">
               </div>
 
             </div>
