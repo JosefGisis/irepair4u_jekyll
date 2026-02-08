@@ -35,3 +35,4 @@ gem "csv"
 gem "base64"
 gem "bigdecimal"
 gem 'jekyll-sitemap'
+gem 'google-protobuf', '3.24.4'
