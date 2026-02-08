@@ -18,13 +18,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: iRepair4uNJ
-#email: your-email@example.com
-#description: >- # this means to ignore newlines until "baseurl:"
+title: iRepair4U - Phone & Tablet Repair in Jackson, NJ
+email: iRepairr4u@gmail.com
+description: >-
+    iRepair4U offers fast, affordable phone and tablet repair services in Jackson, NJ,
+    serving Lakewood and surrounding communities. Screen replacement, battery repair,
+    water damage recovery, and more. Free 90-day warranty on all repairs.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://irepair4unj.com"
-#twitter_username: jekyllrb
-#github_username:  jekyll
+phone: "(732)-330-3038"
+address: "750 Green Valley rd., Jackson, NJ 08527"
+locale: "en_US"
 
 # Build settings
 # theme: minima

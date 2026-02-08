@@ -1,6 +1,9 @@
 ---
 layout: default
-title: iRepair4u FAQ
+title: Terms and Conditions
+seo_title: "Terms and Conditions | iRepair4U Jackson, NJ"
+description: "iRepair4U terms and conditions: service agreements, warranty details, payment policies, and customer responsibilities for phone and tablet repair services."
+keywords: "iRepair4U terms and conditions, phone repair warranty, repair service agreement"
 
 reset: reset.css
 style: style.css
@@ -8,14 +11,14 @@ secondary_style: secondary_style.css
 
 show_back_nav: true
 
-text: faq_text
+text: terms_and_conditions
 ---
 
 <section id="terms-and-conditions">
     <div class="container">
         <div class="flex-column | ten-column-width padding-inline-small">
             <div class="nine-column-width">
-                <h2 class="fs-title fw-semi-bold text-center padding-block-small">TERMS AND CONDITIONS</h2>
+                <h1 class="fs-title fw-semi-bold text-center padding-block-small">Terms and Conditions</h1>
             </div>
 
             <div>
@@ -23,7 +26,7 @@ text: faq_text
 
                 {% for entry in site.data.terms_and_conditions %}
                 <div class="nine-column-width padding-block-small">
-                    <h3 class="fs-column fw-bold padding-block-small">{{ entry.title }}</h3>
+                    <h2 class="fs-column fw-bold padding-block-small">{{ entry.title }}</h2>
                     {% for clause in entry.paragraph %}
                     <p class="fs-card fw-regular padding-block-smaller">{{ clause.clause }}</p>
                     {% endfor %}
