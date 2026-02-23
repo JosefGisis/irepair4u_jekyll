@@ -607,7 +607,6 @@ Logo styling.
     margin: 0 auto;
     padding: 1.5rem 1.5rem 1rem;
     justify-content: space-between;
-    animation: fadeInUp 0.8s ease-out;
 }
 
 .primary-logo .banner-logo {
