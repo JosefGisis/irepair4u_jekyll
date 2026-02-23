@@ -60,6 +60,7 @@ Home page style.
     background: -webkit-linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
     background: -moz-linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
     background: -o-linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+    border-radius: 6px 6px 0 0;
 }
 
 .double-column-text p {
@@ -67,9 +68,11 @@ Home page style.
 }
 
 .double-column-image img {
-    /* Keeps image retio constant */
+    /* Keeps image ratio constant */
     max-width: 100%;
     height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 @media screen and (max-width: 960px) {
@@ -95,6 +98,7 @@ Home page style.
     background-color: var(--red-accent);
     width: min(calc(var(--three-column-width) + 40px), 90%);
     overflow: hidden;
+    border-radius: 10px;
 
     transition: all 1000ms;
     -webkit-transition: all 1000ms;

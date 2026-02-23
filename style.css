@@ -113,6 +113,25 @@ Root variables.
 }
 
 /*********************************************************************************************
+Smooth scrolling and animation foundations.
+*********************************************************************************************/
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*********************************************************************************************
 Accessibility utility styles.
 *********************************************************************************************/
 
@@ -190,7 +209,20 @@ General utility class styles.
 .fs-section-title {
     /* fs-section-title font-size gets special styling */
     font-size: var(--fs-section-title);
-    border-bottom: 2px solid black;
+    letter-spacing: -0.02em;
+    padding-bottom: 0.4rem;
+}
+
+.fs-section-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--red-accent);
+    margin-top: 0.4rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
 }
 
 /* Text sizes shrink to accommodate smaller screens */
@@ -212,7 +244,6 @@ General utility class styles.
     }
     .fs-section-title {
         font-size: 2.2rem;
-        border-bottom: none;
     }
 }
 
@@ -424,6 +455,7 @@ section {
     /* ensures min-width to homogenize appearance */
     min-width: 3.75rem;
     padding: 0.8rem;
+    transition: color 0.25s ease;
 }
 
 .nav-link a:hover,
@@ -542,6 +574,7 @@ Logo styling.
     margin: 0 auto;
     padding: 1rem;
     justify-content: space-between;
+    animation: fadeInUp 0.8s ease-out;
 }
 
 .primary-logo .banner-logo {
@@ -677,6 +710,11 @@ Footer and footer navigation styles.
         margin-inline: auto;
     }
 
+    .primary-footer .column {
+        width: fit-content;
+        margin-inline: auto;
+    }
+
     .primary-footer-logo {
         width: 100%;
         height: auto;
@@ -699,10 +737,8 @@ Banner styling.
 
 /* banner and banner content style */
 .banner {
-    padding-block: 1em;
-    border-bottom: 5px;
-    border-bottom-style: solid;
-    border-bottom-color: var(--shadow-color);
+    padding-block: 1.5em;
+    border-bottom: 3px solid var(--red-accent);
 }
 
 .banner .fs-title {
@@ -733,4 +769,23 @@ Background icon styling.
     .background-image img {
         display: none;
     }
+}
+
+/*********************************************************************************************
+Scroll-reveal animation styles.
+*********************************************************************************************/
+
+.js-animations section,
+.js-animations .banner {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+        opacity 0.8s ease-out,
+        transform 0.8s ease-out;
+}
+
+.js-animations section.revealed,
+.js-animations .banner.revealed {
+    opacity: 1;
+    transform: translateY(0);
 }
