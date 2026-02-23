@@ -805,22 +805,3 @@ Background icon styling.
         display: none;
     }
 }
-
-/*********************************************************************************************
-Scroll-reveal animation styles.
-*********************************************************************************************/
-
-.js-animations section,
-.js-animations .banner {
-    opacity: 0;
-    transform: translateY(28px);
-    transition:
-        opacity 0.8s ease-out,
-        transform 0.8s ease-out;
-}
-
-.js-animations section.revealed,
-.js-animations .banner.revealed {
-    opacity: 1;
-    transform: translateY(0);
-}
