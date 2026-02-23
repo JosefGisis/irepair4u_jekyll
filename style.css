@@ -74,10 +74,10 @@ Root variables.
     /* pixel equivalent 10px */
     /* rem equivalent 0.625rem */
     /* percentage equivalent 0.55% */
-    --inline-base-padding: 1.25rem;
-    /* pixel equivalent 20px */
-    /* rem equivalent 1.25rem */
-    /* percentage equivalent 1.1% */
+    --inline-base-padding: 2rem;
+    /* pixel equivalent 32px */
+    /* rem equivalent 2rem */
+    /* percentage equivalent ~1.75% */
 }
 
 @font-face {
@@ -211,6 +211,7 @@ General utility class styles.
     font-size: var(--fs-section-title);
     letter-spacing: -0.02em;
     padding-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
 }
 
 .fs-section-title::after {
@@ -352,8 +353,8 @@ main {
 }
 
 section {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 /* .container keeps all sections within 960 pixels and centered */
@@ -361,8 +362,8 @@ section {
     width: min(var(--twelve-column-width), 100% - var(--inline-base-padding));
     margin-left: auto;
     margin-right: auto;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 /* .flex-row utility class */
@@ -393,6 +394,7 @@ section {
     grid-template-rows: auto auto;
     justify-content: center;
     justify-items: center;
+    gap: 1rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
@@ -401,6 +403,7 @@ section {
 @media screen and (max-width: 850px) {
     .four-column {
         flex-direction: column;
+        gap: 0.5rem;
     }
 }
 
@@ -416,6 +419,36 @@ section {
     .three-column-grid {
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: auto;
+        gap: 0.75rem;
+    }
+}
+
+/* Responsive section and container spacing for smaller screens */
+@media screen and (max-width: 768px) {
+    section {
+        padding-top: 2.25rem;
+        padding-bottom: 2.25rem;
+    }
+
+    .container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section {
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+    }
+
+    .container {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .banner {
+        padding-block: 1.75em;
     }
 }
 
@@ -572,7 +605,7 @@ Logo styling.
     align-items: center;
     gap: 1rem;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1.5rem 1.5rem 1rem;
     justify-content: space-between;
     animation: fadeInUp 0.8s ease-out;
 }
@@ -594,6 +627,7 @@ Logo styling.
     .primary-logo {
         flex-direction: column;
         margin: 0 auto;
+        padding: 1.25rem 1rem 0.5rem;
     }
 
     .primary-logo .banner-logo {
@@ -626,20 +660,20 @@ Footer and footer navigation styles.
 }
 
 .primary-footer ul {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
     padding: 0;
 }
 
 .primary-footer .column {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
     padding: 0;
 }
 
 .primary-footer li {
     list-style: none;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 .primary-footer-logo {
@@ -695,7 +729,8 @@ Footer and footer navigation styles.
 }
 
 #copyright {
-    padding: 20px;
+    padding: 1.5rem 1.25rem;
+    margin-top: 1rem;
 }
 
 @media screen and (max-width: 850px) {
@@ -703,7 +738,7 @@ Footer and footer navigation styles.
         text-align: center;
     }
     .information-links {
-        margin-top: 50px;
+        margin-top: 2rem;
     }
 
     .primary-footer table {
@@ -724,10 +759,10 @@ Footer and footer navigation styles.
         justify-content: center;
     }
     .primary-footer-logo img {
-        margin: 10px;
+        margin: 0.625rem;
     }
     #copyright {
-        margin-top: 50px;
+        margin-top: 2rem;
     }
 }
 
@@ -737,13 +772,13 @@ Banner styling.
 
 /* banner and banner content style */
 .banner {
-    padding-block: 1.5em;
+    padding-block: 2.5em;
     border-bottom: 3px solid var(--red-accent);
 }
 
 .banner .fs-title {
     text-align: center;
-    padding-bottom: 1em;
+    padding-bottom: 1.25em;
 }
 
 /*********************************************************************************************
