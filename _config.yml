@@ -27,7 +27,7 @@ description: >-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://irepair4unj.com"
 phone: "(732)-330-3038"
-address: "750 Green Valley rd., Jackson, NJ 08527"
+address: "16 Bridge ct, Jackson, NJ 08527"
 locale: "en_US"
 
 # Build settings
